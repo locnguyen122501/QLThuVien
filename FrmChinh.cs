@@ -16,5 +16,11 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+
+        private void FrmChinh_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

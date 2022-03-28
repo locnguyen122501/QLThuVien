@@ -41,7 +41,7 @@ namespace QuanLyThuVien
         {
             if (checkboxHienMatKhau.Checked)
             {
-               txtMatKhau.PasswordChar = '\0';
+                txtMatKhau.PasswordChar = '\0';
             }
             else
             {
@@ -49,6 +49,33 @@ namespace QuanLyThuVien
             }
         }
 
+        private void FrmDangNhap_Load(object sender, EventArgs e)
+        {
+            
+            cbbVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbVaiTro.SelectedItem = "Member";
+        }
 
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            /*this.Hide();
+            FrmDangKy frmDK = new FrmDangKy();*/
+            new FrmDangKy().Show();
+            this.Hide();
+        }
+
+        private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            new FrmChinh().Show();
+            this.Hide();
+        }
     }
 }
