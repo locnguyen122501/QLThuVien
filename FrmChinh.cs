@@ -12,6 +12,7 @@ namespace QuanLyThuVien
 {
     public partial class FrmChinh : Form
     {
+        private Form activeForm;
         public FrmChinh()
         {
             InitializeComponent();
@@ -22,5 +23,32 @@ namespace QuanLyThuVien
 
         }
 
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(childForm);
+            this.panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+        }
+
+        private void sáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmQLySach(), sender);
+        }
+
+        private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmDocGia(), sender);
+        }
     }
 }

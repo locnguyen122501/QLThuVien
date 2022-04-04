@@ -45,10 +45,18 @@
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +68,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDocGia.Designer.cs">
+      <DependentUpon>FrmDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTV_Model\DocGia.cs" />
     <Compile Include="FrmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,8 +93,25 @@
     <Compile Include="FrmDangNhap.Designer.cs">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQLySach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQLySach.Designer.cs">
+      <DependentUpon>FrmQLySach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTV_Model\NhaXuatBan.cs" />
+    <Compile Include="QLTV_Model\PhieuMuon.cs" />
+    <Compile Include="QLTV_Model\PhieuTra.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLTV_Model\QLTV_Model.cs" />
+    <Compile Include="QLTV_Model\QuyDinh.cs" />
+    <Compile Include="QLTV_Model\Sach.cs" />
+    <Compile Include="QLTV_Model\sysdiagrams.cs" />
+    <Compile Include="QLTV_Model\TaiKhoan.cs" />
+    <Compile Include="QLTV_Model\The.cs" />
+    <Compile Include="QLTV_Model\TheLoai.cs" />
+    <Compile Include="QLTV_Model\ThuThu.cs" />
     <EmbeddedResource Include="FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDocGia.resx">
+      <DependentUpon>FrmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQLySach.resx">
+      <DependentUpon>FrmQLySach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -100,6 +138,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

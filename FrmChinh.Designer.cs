@@ -33,9 +33,11 @@ namespace QuanLyThuVien
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanel3 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -63,7 +65,7 @@ namespace QuanLyThuVien
             this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.đọcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel3.SuspendLayout();
             this.dockPanel3_Container.SuspendLayout();
@@ -115,6 +117,17 @@ namespace QuanLyThuVien
             this.dockPanel3_Container.Size = new System.Drawing.Size(794, 27);
             this.dockPanel3_Container.TabIndex = 0;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(591, 4);
+            this.dateTimePicker1.MaximumSize = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 1;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -135,9 +148,19 @@ namespace QuanLyThuVien
             // 
             // abcToolStripMenuItem
             // 
+            this.abcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sáchToolStripMenuItem,
+            this.đọcGiảToolStripMenuItem});
             this.abcToolStripMenuItem.Name = "abcToolStripMenuItem";
             this.abcToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.abcToolStripMenuItem.Text = "Quản lý";
+            // 
+            // sáchToolStripMenuItem
+            // 
+            this.sáchToolStripMenuItem.Name = "sáchToolStripMenuItem";
+            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sáchToolStripMenuItem.Text = "Sách";
+            this.sáchToolStripMenuItem.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
             // 
             // defToolStripMenuItem
             // 
@@ -350,16 +373,12 @@ namespace QuanLyThuVien
             this.panel1.Size = new System.Drawing.Size(616, 607);
             this.panel1.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // đọcGiảToolStripMenuItem
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(591, 4);
-            this.dateTimePicker1.MaximumSize = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.đọcGiảToolStripMenuItem.Name = "đọcGiảToolStripMenuItem";
+            this.đọcGiảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đọcGiảToolStripMenuItem.Text = "Đọc giả";
+            this.đọcGiảToolStripMenuItem.Click += new System.EventHandler(this.đọcGiảToolStripMenuItem_Click);
             // 
             // FrmChinh
             // 
@@ -427,5 +446,7 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ToolStripMenuItem sáchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đọcGiảToolStripMenuItem;
     }
 }
