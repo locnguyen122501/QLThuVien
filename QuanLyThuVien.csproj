@@ -74,6 +74,24 @@
     <Compile Include="FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQLyThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQLyThe.Designer.cs">
+      <DependentUpon>FrmQLyThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTaiKhoan.Designer.cs">
+      <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThuThu.Designer.cs">
+      <DependentUpon>FrmThuThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLTV_Model\DocGia.cs" />
     <Compile Include="FrmChinh.cs">
       <SubType>Form</SubType>
@@ -126,6 +144,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQLySach.resx">
       <DependentUpon>FrmQLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQLyThe.resx">
+      <DependentUpon>FrmQLyThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTaiKhoan.resx">
+      <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThuThu.resx">
+      <DependentUpon>FrmThuThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

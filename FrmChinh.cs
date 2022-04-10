@@ -50,5 +50,20 @@ namespace QuanLyThuVien
         {
             OpenChildForm(new FrmDocGia(), sender);
         }
+
+        private void thủThưToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmThuThu(), sender);
+        }
+
+        private void thẻToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmQLyThe(), sender);
+        }
+
+        private void tàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmTaiKhoan(), sender);
+        }
     }
 }
