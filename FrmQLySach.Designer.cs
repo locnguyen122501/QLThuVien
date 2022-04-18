@@ -41,8 +41,8 @@ namespace QuanLyThuVien
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbTinhTrangSach = new System.Windows.Forms.ComboBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
-            this.txtTinhTrangSach = new System.Windows.Forms.TextBox();
             this.cbbNXB = new System.Windows.Forms.ComboBox();
             this.cbbTenTL = new System.Windows.Forms.ComboBox();
             this.txtSoLanMuon = new System.Windows.Forms.TextBox();
@@ -88,12 +88,18 @@ namespace QuanLyThuVien
             this.gvMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvMaNXB1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvMaTheLoai1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvSoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvSoLanMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvTinhTrangSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvMaTheLoai2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvMaNXB2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvDiaChiNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvNgayThanhLapNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -231,8 +237,8 @@ namespace QuanLyThuVien
             this.gvMaSach,
             this.gvTenSach,
             this.gvTacGia,
-            this.gvMaNXB,
-            this.gvMaTheLoai,
+            this.gvMaNXB1,
+            this.gvMaTheLoai1,
             this.gvGia,
             this.gvSoLuongTon,
             this.gvSoLanMuon,
@@ -250,8 +256,8 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.cbbTinhTrangSach);
             this.groupBox1.Controls.Add(this.txtMaSach);
-            this.groupBox1.Controls.Add(this.txtTinhTrangSach);
             this.groupBox1.Controls.Add(this.cbbNXB);
             this.groupBox1.Controls.Add(this.cbbTenTL);
             this.groupBox1.Controls.Add(this.txtSoLanMuon);
@@ -275,6 +281,17 @@ namespace QuanLyThuVien
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin sách";
             // 
+            // cbbTinhTrangSach
+            // 
+            this.cbbTinhTrangSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbTinhTrangSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTinhTrangSach.FormattingEnabled = true;
+            this.cbbTinhTrangSach.Location = new System.Drawing.Point(569, 107);
+            this.cbbTinhTrangSach.Name = "cbbTinhTrangSach";
+            this.cbbTinhTrangSach.Size = new System.Drawing.Size(220, 27);
+            this.cbbTinhTrangSach.TabIndex = 24;
+            // 
             // txtMaSach
             // 
             this.txtMaSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -284,16 +301,6 @@ namespace QuanLyThuVien
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Size = new System.Drawing.Size(220, 26);
             this.txtMaSach.TabIndex = 23;
-            // 
-            // txtTinhTrangSach
-            // 
-            this.txtTinhTrangSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTinhTrangSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinhTrangSach.Location = new System.Drawing.Point(569, 108);
-            this.txtTinhTrangSach.Name = "txtTinhTrangSach";
-            this.txtTinhTrangSach.Size = new System.Drawing.Size(220, 26);
-            this.txtTinhTrangSach.TabIndex = 22;
             // 
             // cbbNXB
             // 
@@ -606,6 +613,11 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNXB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNXB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNXB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gvMaNXB2,
+            this.gvTenNXB,
+            this.gvDiaChiNXB,
+            this.gvNgayThanhLapNXB});
             this.dgvNXB.Location = new System.Drawing.Point(0, 198);
             this.dgvNXB.Name = "dgvNXB";
             this.dgvNXB.ReadOnly = true;
@@ -705,6 +717,9 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gvMaTheLoai2,
+            this.gvTenTheLoai});
             this.dgvTheLoai.Location = new System.Drawing.Point(0, 198);
             this.dgvTheLoai.Name = "dgvTheLoai";
             this.dgvTheLoai.ReadOnly = true;
@@ -753,17 +768,17 @@ namespace QuanLyThuVien
             this.gvTacGia.Name = "gvTacGia";
             this.gvTacGia.ReadOnly = true;
             // 
-            // gvMaNXB
+            // gvMaNXB1
             // 
-            this.gvMaNXB.HeaderText = "Mã NXB";
-            this.gvMaNXB.Name = "gvMaNXB";
-            this.gvMaNXB.ReadOnly = true;
+            this.gvMaNXB1.HeaderText = "Mã NXB";
+            this.gvMaNXB1.Name = "gvMaNXB1";
+            this.gvMaNXB1.ReadOnly = true;
             // 
-            // gvMaTheLoai
+            // gvMaTheLoai1
             // 
-            this.gvMaTheLoai.HeaderText = "Mã thể loại";
-            this.gvMaTheLoai.Name = "gvMaTheLoai";
-            this.gvMaTheLoai.ReadOnly = true;
+            this.gvMaTheLoai1.HeaderText = "Mã thể loại";
+            this.gvMaTheLoai1.Name = "gvMaTheLoai1";
+            this.gvMaTheLoai1.ReadOnly = true;
             // 
             // gvGia
             // 
@@ -788,6 +803,42 @@ namespace QuanLyThuVien
             this.gvTinhTrangSach.HeaderText = "Tình trạng";
             this.gvTinhTrangSach.Name = "gvTinhTrangSach";
             this.gvTinhTrangSach.ReadOnly = true;
+            // 
+            // gvMaTheLoai2
+            // 
+            this.gvMaTheLoai2.HeaderText = "Mã thể loại";
+            this.gvMaTheLoai2.Name = "gvMaTheLoai2";
+            this.gvMaTheLoai2.ReadOnly = true;
+            // 
+            // gvTenTheLoai
+            // 
+            this.gvTenTheLoai.HeaderText = "Tên thể loại";
+            this.gvTenTheLoai.Name = "gvTenTheLoai";
+            this.gvTenTheLoai.ReadOnly = true;
+            // 
+            // gvMaNXB2
+            // 
+            this.gvMaNXB2.HeaderText = "Mã NXB";
+            this.gvMaNXB2.Name = "gvMaNXB2";
+            this.gvMaNXB2.ReadOnly = true;
+            // 
+            // gvTenNXB
+            // 
+            this.gvTenNXB.HeaderText = "Tên NXB";
+            this.gvTenNXB.Name = "gvTenNXB";
+            this.gvTenNXB.ReadOnly = true;
+            // 
+            // gvDiaChiNXB
+            // 
+            this.gvDiaChiNXB.HeaderText = "Địa chỉ";
+            this.gvDiaChiNXB.Name = "gvDiaChiNXB";
+            this.gvDiaChiNXB.ReadOnly = true;
+            // 
+            // gvNgayThanhLapNXB
+            // 
+            this.gvNgayThanhLapNXB.HeaderText = "Ngày thành lập";
+            this.gvNgayThanhLapNXB.Name = "gvNgayThanhLapNXB";
+            this.gvNgayThanhLapNXB.ReadOnly = true;
             // 
             // FrmQLySach
             // 
@@ -841,7 +892,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.DataGridView dgvSach;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtMaSach;
-        private System.Windows.Forms.TextBox txtTinhTrangSach;
         private System.Windows.Forms.ComboBox cbbNXB;
         private System.Windows.Forms.ComboBox cbbTenTL;
         private System.Windows.Forms.TextBox txtSoLanMuon;
@@ -877,14 +927,21 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Button btnXoaTheLoai;
         private System.Windows.Forms.Button btnSuaTheLoai;
         private System.Windows.Forms.Button btnThemTheLoai;
+        private System.Windows.Forms.ComboBox cbbTinhTrangSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvMaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvTenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvTacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaNXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaTheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaNXB1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaTheLoai1;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvSoLuongTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvSoLanMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvTinhTrangSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaNXB2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvTenNXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvDiaChiNXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvNgayThanhLapNXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaTheLoai2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gvTenTheLoai;
     }
 }

@@ -60,6 +60,7 @@ namespace QuanLyThuVien
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(150, 212);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(215, 20);
             this.txtMatKhau.TabIndex = 22;
             // 
@@ -67,6 +68,7 @@ namespace QuanLyThuVien
             // 
             this.txtXacNhanMatKhau.Location = new System.Drawing.Point(150, 249);
             this.txtXacNhanMatKhau.Name = "txtXacNhanMatKhau";
+            this.txtXacNhanMatKhau.PasswordChar = '*';
             this.txtXacNhanMatKhau.Size = new System.Drawing.Size(215, 20);
             this.txtXacNhanMatKhau.TabIndex = 23;
             // 
@@ -129,6 +131,7 @@ namespace QuanLyThuVien
             this.btnDangKy.TabIndex = 29;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // btnLamMoi
             // 
@@ -179,10 +182,12 @@ namespace QuanLyThuVien
             this.Controls.Add(this.txtXacNhanMatKhau);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.pictureBox3);
+            this.MaximizeBox = false;
             this.Name = "FrmDangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký tài khoản";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDangKy_FormClosing);
+            this.Load += new System.EventHandler(this.FrmDangKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

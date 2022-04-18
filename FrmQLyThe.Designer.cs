@@ -42,6 +42,7 @@ namespace QuanLyThuVien
             this.btnHuy = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtNgayCapThe = new System.Windows.Forms.DateTimePicker();
             this.dtNgayHetHan = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@ namespace QuanLyThuVien
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaThe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtNgayCapThe = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -197,6 +197,14 @@ namespace QuanLyThuVien
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thẻ";
             // 
+            // dtNgayCapThe
+            // 
+            this.dtNgayCapThe.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayCapThe.Location = new System.Drawing.Point(545, 71);
+            this.dtNgayCapThe.Name = "dtNgayCapThe";
+            this.dtNgayCapThe.Size = new System.Drawing.Size(220, 29);
+            this.dtNgayCapThe.TabIndex = 30;
+            // 
             // dtNgayHetHan
             // 
             this.dtNgayHetHan.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,14 +268,6 @@ namespace QuanLyThuVien
             this.label1.Size = new System.Drawing.Size(55, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã thẻ:";
-            // 
-            // dtNgayCapThe
-            // 
-            this.dtNgayCapThe.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayCapThe.Location = new System.Drawing.Point(545, 71);
-            this.dtNgayCapThe.Name = "dtNgayCapThe";
-            this.dtNgayCapThe.Size = new System.Drawing.Size(220, 29);
-            this.dtNgayCapThe.TabIndex = 30;
             // 
             // FrmQLyThe
             // 

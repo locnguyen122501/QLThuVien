@@ -47,7 +47,7 @@ namespace QuanLyThuVien
             // txtTenTaiKhoan
             // 
             this.txtTenTaiKhoan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(93, 200);
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(115, 200);
             this.txtTenTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenTaiKhoan.Multiline = true;
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
@@ -60,7 +60,7 @@ namespace QuanLyThuVien
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(92, 239);
+            this.txtMatKhau.Location = new System.Drawing.Point(114, 239);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhau.Multiline = true;
             this.txtMatKhau.Name = "txtMatKhau";
@@ -73,7 +73,7 @@ namespace QuanLyThuVien
             this.checkboxHienMatKhau.AutoSize = true;
             this.checkboxHienMatKhau.BackColor = System.Drawing.Color.Transparent;
             this.checkboxHienMatKhau.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkboxHienMatKhau.Location = new System.Drawing.Point(93, 271);
+            this.checkboxHienMatKhau.Location = new System.Drawing.Point(115, 271);
             this.checkboxHienMatKhau.Name = "checkboxHienMatKhau";
             this.checkboxHienMatKhau.Size = new System.Drawing.Size(109, 17);
             this.checkboxHienMatKhau.TabIndex = 15;
@@ -83,7 +83,7 @@ namespace QuanLyThuVien
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(93, 322);
+            this.btnDangNhap.Location = new System.Drawing.Point(115, 322);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btnDangNhap.TabIndex = 16;
@@ -95,7 +95,7 @@ namespace QuanLyThuVien
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 192);
+            this.pictureBox1.Location = new System.Drawing.Point(66, 192);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,7 +106,7 @@ namespace QuanLyThuVien
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(44, 231);
+            this.pictureBox2.Location = new System.Drawing.Point(66, 231);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,7 +126,7 @@ namespace QuanLyThuVien
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(174, 321);
+            this.btnDangKy.Location = new System.Drawing.Point(196, 321);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(75, 23);
             this.btnDangKy.TabIndex = 21;
@@ -138,9 +138,9 @@ namespace QuanLyThuVien
             // 
             this.cbbVaiTro.FormattingEnabled = true;
             this.cbbVaiTro.Items.AddRange(new object[] {
-            "Member",
+            "User",
             "Admin"});
-            this.cbbVaiTro.Location = new System.Drawing.Point(93, 294);
+            this.cbbVaiTro.Location = new System.Drawing.Point(115, 294);
             this.cbbVaiTro.Name = "cbbVaiTro";
             this.cbbVaiTro.Size = new System.Drawing.Size(156, 21);
             this.cbbVaiTro.TabIndex = 22;
@@ -165,7 +165,6 @@ namespace QuanLyThuVien
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDangNhap_FormClosing);
             this.Load += new System.EventHandler(this.FrmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

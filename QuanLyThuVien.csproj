@@ -68,11 +68,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBQuanLyThuVien.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBQuanLyThuVien.dbml</DependentUpon>
+    </Compile>
     <Compile Include="FrmDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDocGia.Designer.cs">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMuonTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMuonTraSach.Designer.cs">
+      <DependentUpon>FrmMuonTraSach.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmQLyThe.cs">
       <SubType>Form</SubType>
@@ -80,11 +91,29 @@
     <Compile Include="FrmQLyThe.Designer.cs">
       <DependentUpon>FrmQLyThe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLy.Designer.cs">
+      <DependentUpon>FrmQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuyDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuyDinh.Designer.cs">
+      <DependentUpon>FrmQuyDinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTaiKhoan.Designer.cs">
       <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongKe.Designer.cs">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThuThu.cs">
       <SubType>Form</SubType>
@@ -92,7 +121,6 @@
     <Compile Include="FrmThuThu.Designer.cs">
       <DependentUpon>FrmThuThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLTV_Model\DocGia.cs" />
     <Compile Include="FrmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,19 +145,9 @@
     <Compile Include="FrmQLySach.Designer.cs">
       <DependentUpon>FrmQLySach.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLTV_Model\NhaXuatBan.cs" />
-    <Compile Include="QLTV_Model\PhieuMuon.cs" />
-    <Compile Include="QLTV_Model\PhieuTra.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLTV_Model\QLTV_Model.cs" />
-    <Compile Include="QLTV_Model\QuyDinh.cs" />
-    <Compile Include="QLTV_Model\Sach.cs" />
-    <Compile Include="QLTV_Model\sysdiagrams.cs" />
-    <Compile Include="QLTV_Model\TaiKhoan.cs" />
-    <Compile Include="QLTV_Model\The.cs" />
-    <Compile Include="QLTV_Model\TheLoai.cs" />
-    <Compile Include="QLTV_Model\ThuThu.cs" />
     <EmbeddedResource Include="FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,14 +160,26 @@
     <EmbeddedResource Include="FrmDocGia.resx">
       <DependentUpon>FrmDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMuonTraSach.resx">
+      <DependentUpon>FrmMuonTraSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmQLySach.resx">
       <DependentUpon>FrmQLySach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQLyThe.resx">
       <DependentUpon>FrmQLyThe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLy.resx">
+      <DependentUpon>FrmQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuyDinh.resx">
+      <DependentUpon>FrmQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTaiKhoan.resx">
       <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongKe.resx">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThuThu.resx">
       <DependentUpon>FrmThuThu.cs</DependentUpon>
@@ -165,6 +195,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DBQuanLyThuVien.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBQuanLyThuVien.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBQuanLyThuVien.dbml.layout">
+      <DependentUpon>DBQuanLyThuVien.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -179,7 +217,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="images\hutech-banner-test.png" />
     <Content Include="images\hutech-banner.png" />

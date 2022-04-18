@@ -12,11 +12,19 @@ namespace QuanLyThuVien
 {
     public partial class FrmDangNhap : Form
     {
+        DBQuanLyThuVienDataContext db = new DBQuanLyThuVienDataContext();
         public FrmDangNhap()
         {
             InitializeComponent();
+            this.ActiveControl = txtTenTaiKhoan;
+            txtTenTaiKhoan.Focus();
         }
 
+        private void FrmDangNhap_Load(object sender, EventArgs e)
+        {          
+            cbbVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbVaiTro.SelectedItem = "User";
+        }
 
         private void txtTenTaiKhoan_Enter(object sender, EventArgs e)
         {
@@ -36,7 +44,6 @@ namespace QuanLyThuVien
             }
         }
 
-
         private void checkboxHienMatKhau_CheckedChanged(object sender, EventArgs e)
         {
             if (checkboxHienMatKhau.Checked)
@@ -49,33 +56,54 @@ namespace QuanLyThuVien
             }
         }
 
-        private void FrmDangNhap_Load(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            
-            cbbVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbVaiTro.SelectedItem = "Member";
+            if (txtTenTaiKhoan.Text.Trim().Length.Equals(0))
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenTaiKhoan.Focus();
+            }
+            else
+            if (txtMatKhau.Text.Trim().Length.Equals(0))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMatKhau.Focus();
+            }
+            else
+            {
+                TaiKhoan check = db.TaiKhoans.SingleOrDefault(n => n.TK.Equals(txtTenTaiKhoan.Text.Trim()) && n.MK.Equals(txtMatKhau.Text.Trim()) && n.Quyen.Equals(cbbVaiTro.Text));
+                if (check == null)
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng. Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+                else
+                {
+                    if (cbbVaiTro.Text.Equals("User"))
+                    {
+                        Model.maTT = check.MaTT;
+                        MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        FrmChinh frmChinh = new FrmChinh();
+                        frmChinh.ShowDialog();
+                    }
+                    if (cbbVaiTro.Text.Equals("Admin"))
+                    {
+                        MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        FrmQuanLy frmQL = new FrmQuanLy();
+                        frmQL.ShowDialog();
+                    }
+                }
+            }
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            /*this.Hide();
-            FrmDangKy frmDK = new FrmDangKy();*/
-            new FrmDangKy().Show();
+            //MessageBox.Show("gasfsf", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
+            FrmDangKy frmDK = new FrmDangKy();
+            frmDK.Show();
         }
 
-        private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void btnDangNhap_Click(object sender, EventArgs e)
-        {
-            new FrmChinh().Show();
-            this.Hide();
-        }
     }
 }

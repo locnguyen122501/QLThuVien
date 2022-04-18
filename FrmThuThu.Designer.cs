@@ -45,17 +45,17 @@ namespace QuanLyThuVien
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvThuThu = new System.Windows.Forms.DataGridView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnSuaTT = new System.Windows.Forms.Button();
-            this.btnThemTT = new System.Windows.Forms.Button();
-            this.btnXoaTT = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.gvMaThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvHoTenThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvGioiTinhThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvDiaChiThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvNgaySinhThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvSDTThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnSuaTT = new System.Windows.Forms.Button();
+            this.btnThemTT = new System.Windows.Forms.Button();
+            this.btnXoaTT = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -248,6 +248,42 @@ namespace QuanLyThuVien
             this.dgvThuThu.Size = new System.Drawing.Size(1196, 404);
             this.dgvThuThu.TabIndex = 29;
             // 
+            // gvMaThuThu
+            // 
+            this.gvMaThuThu.HeaderText = "Mã thủ thư";
+            this.gvMaThuThu.Name = "gvMaThuThu";
+            this.gvMaThuThu.ReadOnly = true;
+            // 
+            // gvHoTenThuThu
+            // 
+            this.gvHoTenThuThu.HeaderText = "Họ tên";
+            this.gvHoTenThuThu.Name = "gvHoTenThuThu";
+            this.gvHoTenThuThu.ReadOnly = true;
+            // 
+            // gvGioiTinhThuThu
+            // 
+            this.gvGioiTinhThuThu.HeaderText = "Giới tính";
+            this.gvGioiTinhThuThu.Name = "gvGioiTinhThuThu";
+            this.gvGioiTinhThuThu.ReadOnly = true;
+            // 
+            // gvDiaChiThuThu
+            // 
+            this.gvDiaChiThuThu.HeaderText = "Địa chỉ";
+            this.gvDiaChiThuThu.Name = "gvDiaChiThuThu";
+            this.gvDiaChiThuThu.ReadOnly = true;
+            // 
+            // gvNgaySinhThuThu
+            // 
+            this.gvNgaySinhThuThu.HeaderText = "Ngày sinh";
+            this.gvNgaySinhThuThu.Name = "gvNgaySinhThuThu";
+            this.gvNgaySinhThuThu.ReadOnly = true;
+            // 
+            // gvSDTThuThu
+            // 
+            this.gvSDTThuThu.HeaderText = "SĐT";
+            this.gvSDTThuThu.Name = "gvSDTThuThu";
+            this.gvSDTThuThu.ReadOnly = true;
+            // 
             // groupBox4
             // 
             this.groupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -302,42 +338,6 @@ namespace QuanLyThuVien
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // gvMaThuThu
-            // 
-            this.gvMaThuThu.HeaderText = "Mã thủ thư";
-            this.gvMaThuThu.Name = "gvMaThuThu";
-            this.gvMaThuThu.ReadOnly = true;
-            // 
-            // gvHoTenThuThu
-            // 
-            this.gvHoTenThuThu.HeaderText = "Họ tên";
-            this.gvHoTenThuThu.Name = "gvHoTenThuThu";
-            this.gvHoTenThuThu.ReadOnly = true;
-            // 
-            // gvGioiTinhThuThu
-            // 
-            this.gvGioiTinhThuThu.HeaderText = "Giới tính";
-            this.gvGioiTinhThuThu.Name = "gvGioiTinhThuThu";
-            this.gvGioiTinhThuThu.ReadOnly = true;
-            // 
-            // gvDiaChiThuThu
-            // 
-            this.gvDiaChiThuThu.HeaderText = "Địa chỉ";
-            this.gvDiaChiThuThu.Name = "gvDiaChiThuThu";
-            this.gvDiaChiThuThu.ReadOnly = true;
-            // 
-            // gvNgaySinhThuThu
-            // 
-            this.gvNgaySinhThuThu.HeaderText = "Ngày sinh";
-            this.gvNgaySinhThuThu.Name = "gvNgaySinhThuThu";
-            this.gvNgaySinhThuThu.ReadOnly = true;
-            // 
-            // gvSDTThuThu
-            // 
-            this.gvSDTThuThu.HeaderText = "SĐT";
-            this.gvSDTThuThu.Name = "gvSDTThuThu";
-            this.gvSDTThuThu.ReadOnly = true;
             // 
             // FrmThuThu
             // 

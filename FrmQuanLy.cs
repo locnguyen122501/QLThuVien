@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class FrmChinh : Form
+    public partial class FrmQuanLy : Form
     {
         private Form activeForm;
-        public FrmChinh()
+        public FrmQuanLy()
         {
             InitializeComponent();
         }
 
-        private void FrmChinh_Load(object sender, EventArgs e)
+        private void FrmQuanLy_Load(object sender, EventArgs e)
         {
 
         }
@@ -40,14 +40,9 @@ namespace QuanLyThuVien
             childForm.Show();
         }
 
-        private void sáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmQLySach(), sender);
-        }
-
-        private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmDocGia(), sender);
+            OpenChildForm(new FrmTaiKhoan(), sender);
         }
 
         private void thủThưToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,23 +50,18 @@ namespace QuanLyThuVien
             OpenChildForm(new FrmThuThu(), sender);
         }
 
-        private void thẻToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmQLyThe(), sender);
+            OpenChildForm(new FrmThongKe(), sender);
         }
 
-        private void tàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void quyĐịnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmTaiKhoan(), sender);
-        }
-
-        private void defToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmMuonTraSach(), sender);
+            OpenChildForm(new FrmQuyDinh(), sender);
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
-        {          
+        {
             if (MessageBox.Show("Bạn có thực sự muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
