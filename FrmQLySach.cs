@@ -16,5 +16,10 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+
+        private void FrmQLySach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

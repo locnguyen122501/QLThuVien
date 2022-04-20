@@ -71,14 +71,23 @@ namespace QuanLyThuVien
             }
             else
             {
-                TaiKhoan check = db.TaiKhoans.SingleOrDefault(n => n.TK.Equals(txtTenTaiKhoan.Text.Trim()) && n.MK.Equals(txtMatKhau.Text.Trim()) && n.Quyen.Equals(cbbVaiTro.Text));
+                TaiKhoan check = db.TaiKhoans.SingleOrDefault(n => n.TK.Equals(txtTenTaiKhoan.Text.Trim()) && n.MK.Equals(txtMatKhau.Text.Trim()));
+
                 if (check == null)
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng. Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 else
                 {
-                    if (cbbVaiTro.Text.Equals("User"))
+                    TaiKhoan checkrole = db.TaiKhoans.SingleOrDefault(n => n.TK.Equals(txtTenTaiKhoan.Text.Trim()) && n.MK.Equals(txtMatKhau.Text.Trim()) && n.Quyen.Equals("User"));
+                    if(checkrole == null)
+                    {
+                        MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        FrmQuanLy frmQL = new FrmQuanLy();
+                        frmQL.ShowDialog();
+                    }
+                    else
                     {
                         Model.maTT = check.MaTT;
                         MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -86,24 +95,15 @@ namespace QuanLyThuVien
                         FrmChinh frmChinh = new FrmChinh();
                         frmChinh.ShowDialog();
                     }
-                    if (cbbVaiTro.Text.Equals("Admin"))
-                    {
-                        MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        FrmQuanLy frmQL = new FrmQuanLy();
-                        frmQL.ShowDialog();
-                    }
                 }
             }
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("gasfsf", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
             FrmDangKy frmDK = new FrmDangKy();
             frmDK.Show();
         }
-
     }
 }

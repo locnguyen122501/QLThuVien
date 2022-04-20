@@ -40,6 +40,15 @@ namespace QuanLyThuVien
             this.label11 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvSach = new System.Windows.Forms.DataGridView();
+            this.gvMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvMaNXB1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvMaTheLoai1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvSoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvSoLanMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTinhTrangSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbTinhTrangSach = new System.Windows.Forms.ComboBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
@@ -74,6 +83,10 @@ namespace QuanLyThuVien
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvNXB = new System.Windows.Forms.DataGridView();
+            this.gvMaNXB2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvTenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvDiaChiNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvNgayThanhLapNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnHuyTheLoai = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -83,23 +96,10 @@ namespace QuanLyThuVien
             this.btnThemTheLoai = new System.Windows.Forms.Button();
             this.txtMaTheLoai = new System.Windows.Forms.TextBox();
             this.dgvTheLoai = new System.Windows.Forms.DataGridView();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.gvMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaNXB1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaTheLoai1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSoLanMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTinhTrangSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvMaTheLoai2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvTenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaNXB2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvDiaChiNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvNgayThanhLapNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -248,6 +248,60 @@ namespace QuanLyThuVien
             this.dgvSach.ReadOnly = true;
             this.dgvSach.Size = new System.Drawing.Size(1189, 364);
             this.dgvSach.TabIndex = 1;
+            // 
+            // gvMaSach
+            // 
+            this.gvMaSach.HeaderText = "Mã";
+            this.gvMaSach.Name = "gvMaSach";
+            this.gvMaSach.ReadOnly = true;
+            // 
+            // gvTenSach
+            // 
+            this.gvTenSach.HeaderText = "Tên sách";
+            this.gvTenSach.Name = "gvTenSach";
+            this.gvTenSach.ReadOnly = true;
+            // 
+            // gvTacGia
+            // 
+            this.gvTacGia.HeaderText = "Tác giả";
+            this.gvTacGia.Name = "gvTacGia";
+            this.gvTacGia.ReadOnly = true;
+            // 
+            // gvMaNXB1
+            // 
+            this.gvMaNXB1.HeaderText = "Mã NXB";
+            this.gvMaNXB1.Name = "gvMaNXB1";
+            this.gvMaNXB1.ReadOnly = true;
+            // 
+            // gvMaTheLoai1
+            // 
+            this.gvMaTheLoai1.HeaderText = "Mã thể loại";
+            this.gvMaTheLoai1.Name = "gvMaTheLoai1";
+            this.gvMaTheLoai1.ReadOnly = true;
+            // 
+            // gvGia
+            // 
+            this.gvGia.HeaderText = "Giá";
+            this.gvGia.Name = "gvGia";
+            this.gvGia.ReadOnly = true;
+            // 
+            // gvSoLuongTon
+            // 
+            this.gvSoLuongTon.HeaderText = "Còn lại";
+            this.gvSoLuongTon.Name = "gvSoLuongTon";
+            this.gvSoLuongTon.ReadOnly = true;
+            // 
+            // gvSoLanMuon
+            // 
+            this.gvSoLanMuon.HeaderText = "Số lần mượn";
+            this.gvSoLanMuon.Name = "gvSoLanMuon";
+            this.gvSoLanMuon.ReadOnly = true;
+            // 
+            // gvTinhTrangSach
+            // 
+            this.gvTinhTrangSach.HeaderText = "Tình trạng";
+            this.gvTinhTrangSach.Name = "gvTinhTrangSach";
+            this.gvTinhTrangSach.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -624,6 +678,30 @@ namespace QuanLyThuVien
             this.dgvNXB.Size = new System.Drawing.Size(575, 421);
             this.dgvNXB.TabIndex = 3;
             // 
+            // gvMaNXB2
+            // 
+            this.gvMaNXB2.HeaderText = "Mã NXB";
+            this.gvMaNXB2.Name = "gvMaNXB2";
+            this.gvMaNXB2.ReadOnly = true;
+            // 
+            // gvTenNXB
+            // 
+            this.gvTenNXB.HeaderText = "Tên NXB";
+            this.gvTenNXB.Name = "gvTenNXB";
+            this.gvTenNXB.ReadOnly = true;
+            // 
+            // gvDiaChiNXB
+            // 
+            this.gvDiaChiNXB.HeaderText = "Địa chỉ";
+            this.gvDiaChiNXB.Name = "gvDiaChiNXB";
+            this.gvDiaChiNXB.ReadOnly = true;
+            // 
+            // gvNgayThanhLapNXB
+            // 
+            this.gvNgayThanhLapNXB.HeaderText = "Ngày thành lập";
+            this.gvNgayThanhLapNXB.Name = "gvNgayThanhLapNXB";
+            this.gvNgayThanhLapNXB.ReadOnly = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnHuyTheLoai);
@@ -726,6 +804,18 @@ namespace QuanLyThuVien
             this.dgvTheLoai.Size = new System.Drawing.Size(575, 421);
             this.dgvTheLoai.TabIndex = 2;
             // 
+            // gvMaTheLoai2
+            // 
+            this.gvMaTheLoai2.HeaderText = "Mã thể loại";
+            this.gvMaTheLoai2.Name = "gvMaTheLoai2";
+            this.gvMaTheLoai2.ReadOnly = true;
+            // 
+            // gvTenTheLoai
+            // 
+            this.gvTenTheLoai.HeaderText = "Tên thể loại";
+            this.gvTenTheLoai.Name = "gvTenTheLoai";
+            this.gvTenTheLoai.ReadOnly = true;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -750,96 +840,6 @@ namespace QuanLyThuVien
             this.label10.Text = "Quản lý sách";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gvMaSach
-            // 
-            this.gvMaSach.HeaderText = "Mã";
-            this.gvMaSach.Name = "gvMaSach";
-            this.gvMaSach.ReadOnly = true;
-            // 
-            // gvTenSach
-            // 
-            this.gvTenSach.HeaderText = "Tên sách";
-            this.gvTenSach.Name = "gvTenSach";
-            this.gvTenSach.ReadOnly = true;
-            // 
-            // gvTacGia
-            // 
-            this.gvTacGia.HeaderText = "Tác giả";
-            this.gvTacGia.Name = "gvTacGia";
-            this.gvTacGia.ReadOnly = true;
-            // 
-            // gvMaNXB1
-            // 
-            this.gvMaNXB1.HeaderText = "Mã NXB";
-            this.gvMaNXB1.Name = "gvMaNXB1";
-            this.gvMaNXB1.ReadOnly = true;
-            // 
-            // gvMaTheLoai1
-            // 
-            this.gvMaTheLoai1.HeaderText = "Mã thể loại";
-            this.gvMaTheLoai1.Name = "gvMaTheLoai1";
-            this.gvMaTheLoai1.ReadOnly = true;
-            // 
-            // gvGia
-            // 
-            this.gvGia.HeaderText = "Giá";
-            this.gvGia.Name = "gvGia";
-            this.gvGia.ReadOnly = true;
-            // 
-            // gvSoLuongTon
-            // 
-            this.gvSoLuongTon.HeaderText = "Còn lại";
-            this.gvSoLuongTon.Name = "gvSoLuongTon";
-            this.gvSoLuongTon.ReadOnly = true;
-            // 
-            // gvSoLanMuon
-            // 
-            this.gvSoLanMuon.HeaderText = "Số lần mượn";
-            this.gvSoLanMuon.Name = "gvSoLanMuon";
-            this.gvSoLanMuon.ReadOnly = true;
-            // 
-            // gvTinhTrangSach
-            // 
-            this.gvTinhTrangSach.HeaderText = "Tình trạng";
-            this.gvTinhTrangSach.Name = "gvTinhTrangSach";
-            this.gvTinhTrangSach.ReadOnly = true;
-            // 
-            // gvMaTheLoai2
-            // 
-            this.gvMaTheLoai2.HeaderText = "Mã thể loại";
-            this.gvMaTheLoai2.Name = "gvMaTheLoai2";
-            this.gvMaTheLoai2.ReadOnly = true;
-            // 
-            // gvTenTheLoai
-            // 
-            this.gvTenTheLoai.HeaderText = "Tên thể loại";
-            this.gvTenTheLoai.Name = "gvTenTheLoai";
-            this.gvTenTheLoai.ReadOnly = true;
-            // 
-            // gvMaNXB2
-            // 
-            this.gvMaNXB2.HeaderText = "Mã NXB";
-            this.gvMaNXB2.Name = "gvMaNXB2";
-            this.gvMaNXB2.ReadOnly = true;
-            // 
-            // gvTenNXB
-            // 
-            this.gvTenNXB.HeaderText = "Tên NXB";
-            this.gvTenNXB.Name = "gvTenNXB";
-            this.gvTenNXB.ReadOnly = true;
-            // 
-            // gvDiaChiNXB
-            // 
-            this.gvDiaChiNXB.HeaderText = "Địa chỉ";
-            this.gvDiaChiNXB.Name = "gvDiaChiNXB";
-            this.gvDiaChiNXB.ReadOnly = true;
-            // 
-            // gvNgayThanhLapNXB
-            // 
-            this.gvNgayThanhLapNXB.HeaderText = "Ngày thành lập";
-            this.gvNgayThanhLapNXB.Name = "gvNgayThanhLapNXB";
-            this.gvNgayThanhLapNXB.ReadOnly = true;
-            // 
             // FrmQLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -851,6 +851,7 @@ namespace QuanLyThuVien
             this.Name = "FrmQLySach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQLySach";
+            this.Load += new System.EventHandler(this.FrmQLySach_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
