@@ -22,8 +22,7 @@ namespace QuanLyThuVien
 
         private void FrmDangNhap_Load(object sender, EventArgs e)
         {          
-            cbbVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbVaiTro.SelectedItem = "User";
+
         }
 
         private void txtTenTaiKhoan_Enter(object sender, EventArgs e)

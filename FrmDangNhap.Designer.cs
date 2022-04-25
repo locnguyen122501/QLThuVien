@@ -38,7 +38,6 @@ namespace QuanLyThuVien
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnDangKy = new System.Windows.Forms.Button();
-            this.cbbVaiTro = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,7 +82,7 @@ namespace QuanLyThuVien
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(115, 322);
+            this.btnDangNhap.Location = new System.Drawing.Point(115, 294);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btnDangNhap.TabIndex = 16;
@@ -126,24 +125,13 @@ namespace QuanLyThuVien
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(196, 321);
+            this.btnDangKy.Location = new System.Drawing.Point(196, 293);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(75, 23);
             this.btnDangKy.TabIndex = 21;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
-            // 
-            // cbbVaiTro
-            // 
-            this.cbbVaiTro.FormattingEnabled = true;
-            this.cbbVaiTro.Items.AddRange(new object[] {
-            "User",
-            "Admin"});
-            this.cbbVaiTro.Location = new System.Drawing.Point(115, 294);
-            this.cbbVaiTro.Name = "cbbVaiTro";
-            this.cbbVaiTro.Size = new System.Drawing.Size(156, 21);
-            this.cbbVaiTro.TabIndex = 22;
             // 
             // FrmDangNhap
             // 
@@ -152,7 +140,6 @@ namespace QuanLyThuVien
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(399, 386);
-            this.Controls.Add(this.cbbVaiTro);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -184,7 +171,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnDangKy;
-        private System.Windows.Forms.ComboBox cbbVaiTro;
     }
 }
 
