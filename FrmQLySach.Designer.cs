@@ -40,19 +40,10 @@ namespace QuanLyThuVien
             this.label11 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvSach = new System.Windows.Forms.DataGridView();
-            this.gvMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaNXB1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaTheLoai1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSoLanMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTinhTrangSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNXB = new System.Windows.Forms.TextBox();
             this.cbbTinhTrangSach = new System.Windows.Forms.ComboBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
-            this.cbbNXB = new System.Windows.Forms.ComboBox();
             this.cbbTenTL = new System.Windows.Forms.ComboBox();
             this.txtSoLanMuon = new System.Windows.Forms.TextBox();
             this.txtSoLuongTon = new System.Windows.Forms.TextBox();
@@ -70,7 +61,6 @@ namespace QuanLyThuVien
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnHuyNXB = new System.Windows.Forms.Button();
             this.btnXoaNXB = new System.Windows.Forms.Button();
             this.btnSuaNXB = new System.Windows.Forms.Button();
             this.btnThemNXB = new System.Windows.Forms.Button();
@@ -83,12 +73,7 @@ namespace QuanLyThuVien
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvNXB = new System.Windows.Forms.DataGridView();
-            this.gvMaNXB2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvDiaChiNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvNgayThanhLapNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnHuyTheLoai = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.btnXoaTheLoai = new System.Windows.Forms.Button();
             this.txtTenTheLoai = new System.Windows.Forms.TextBox();
@@ -96,8 +81,6 @@ namespace QuanLyThuVien
             this.btnThemTheLoai = new System.Windows.Forms.Button();
             this.txtMaTheLoai = new System.Windows.Forms.TextBox();
             this.dgvTheLoai = new System.Windows.Forms.DataGridView();
-            this.gvMaTheLoai2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -122,7 +105,7 @@ namespace QuanLyThuVien
             this.tabControl1.Location = new System.Drawing.Point(1, 51);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1197, 667);
+            this.tabControl1.Size = new System.Drawing.Size(1318, 667);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -137,7 +120,7 @@ namespace QuanLyThuVien
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1189, 641);
+            this.tabPage1.Size = new System.Drawing.Size(1310, 641);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thông tin sách";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -165,6 +148,7 @@ namespace QuanLyThuVien
             this.btnSuaSach.TabIndex = 4;
             this.btnSuaSach.Text = "Sửa";
             this.btnSuaSach.UseVisualStyleBackColor = true;
+            this.btnSuaSach.Click += new System.EventHandler(this.btnSuaSach_Click);
             // 
             // btnThemSach
             // 
@@ -175,6 +159,7 @@ namespace QuanLyThuVien
             this.btnThemSach.TabIndex = 2;
             this.btnThemSach.Text = "Thêm";
             this.btnThemSach.UseVisualStyleBackColor = true;
+            this.btnThemSach.Click += new System.EventHandler(this.btnThemSach_Click);
             // 
             // btnXoaSach
             // 
@@ -185,6 +170,7 @@ namespace QuanLyThuVien
             this.btnXoaSach.TabIndex = 3;
             this.btnXoaSach.Text = "Xóa";
             this.btnXoaSach.UseVisualStyleBackColor = true;
+            this.btnXoaSach.Click += new System.EventHandler(this.btnXoaSach_Click);
             // 
             // btnHuySach
             // 
@@ -205,6 +191,7 @@ namespace QuanLyThuVien
             this.btnTimKiemSach.TabIndex = 25;
             this.btnTimKiemSach.Text = "Tìm kiếm";
             this.btnTimKiemSach.UseVisualStyleBackColor = true;
+            this.btnTimKiemSach.Click += new System.EventHandler(this.btnTimKiemSach_Click);
             // 
             // label11
             // 
@@ -223,6 +210,7 @@ namespace QuanLyThuVien
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(220, 26);
             this.txtTimKiem.TabIndex = 24;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // dgvSach
             // 
@@ -233,75 +221,12 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gvMaSach,
-            this.gvTenSach,
-            this.gvTacGia,
-            this.gvMaNXB1,
-            this.gvMaTheLoai1,
-            this.gvGia,
-            this.gvSoLuongTon,
-            this.gvSoLanMuon,
-            this.gvTinhTrangSach});
             this.dgvSach.Location = new System.Drawing.Point(0, 277);
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.ReadOnly = true;
-            this.dgvSach.Size = new System.Drawing.Size(1189, 364);
+            this.dgvSach.Size = new System.Drawing.Size(1310, 364);
             this.dgvSach.TabIndex = 1;
-            // 
-            // gvMaSach
-            // 
-            this.gvMaSach.HeaderText = "Mã";
-            this.gvMaSach.Name = "gvMaSach";
-            this.gvMaSach.ReadOnly = true;
-            // 
-            // gvTenSach
-            // 
-            this.gvTenSach.HeaderText = "Tên sách";
-            this.gvTenSach.Name = "gvTenSach";
-            this.gvTenSach.ReadOnly = true;
-            // 
-            // gvTacGia
-            // 
-            this.gvTacGia.HeaderText = "Tác giả";
-            this.gvTacGia.Name = "gvTacGia";
-            this.gvTacGia.ReadOnly = true;
-            // 
-            // gvMaNXB1
-            // 
-            this.gvMaNXB1.HeaderText = "Mã NXB";
-            this.gvMaNXB1.Name = "gvMaNXB1";
-            this.gvMaNXB1.ReadOnly = true;
-            // 
-            // gvMaTheLoai1
-            // 
-            this.gvMaTheLoai1.HeaderText = "Mã thể loại";
-            this.gvMaTheLoai1.Name = "gvMaTheLoai1";
-            this.gvMaTheLoai1.ReadOnly = true;
-            // 
-            // gvGia
-            // 
-            this.gvGia.HeaderText = "Giá";
-            this.gvGia.Name = "gvGia";
-            this.gvGia.ReadOnly = true;
-            // 
-            // gvSoLuongTon
-            // 
-            this.gvSoLuongTon.HeaderText = "Còn lại";
-            this.gvSoLuongTon.Name = "gvSoLuongTon";
-            this.gvSoLuongTon.ReadOnly = true;
-            // 
-            // gvSoLanMuon
-            // 
-            this.gvSoLanMuon.HeaderText = "Số lần mượn";
-            this.gvSoLanMuon.Name = "gvSoLanMuon";
-            this.gvSoLanMuon.ReadOnly = true;
-            // 
-            // gvTinhTrangSach
-            // 
-            this.gvTinhTrangSach.HeaderText = "Tình trạng";
-            this.gvTinhTrangSach.Name = "gvTinhTrangSach";
-            this.gvTinhTrangSach.ReadOnly = true;
+            this.dgvSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSach_CellClick);
             // 
             // groupBox1
             // 
@@ -310,9 +235,9 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.txtNXB);
             this.groupBox1.Controls.Add(this.cbbTinhTrangSach);
             this.groupBox1.Controls.Add(this.txtMaSach);
-            this.groupBox1.Controls.Add(this.cbbNXB);
             this.groupBox1.Controls.Add(this.cbbTenTL);
             this.groupBox1.Controls.Add(this.txtSoLanMuon);
             this.groupBox1.Controls.Add(this.txtSoLuongTon);
@@ -335,6 +260,14 @@ namespace QuanLyThuVien
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin sách";
             // 
+            // txtNXB
+            // 
+            this.txtNXB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNXB.Location = new System.Drawing.Point(569, 73);
+            this.txtNXB.Name = "txtNXB";
+            this.txtNXB.Size = new System.Drawing.Size(220, 26);
+            this.txtNXB.TabIndex = 25;
+            // 
             // cbbTinhTrangSach
             // 
             this.cbbTinhTrangSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -355,17 +288,6 @@ namespace QuanLyThuVien
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Size = new System.Drawing.Size(220, 26);
             this.txtMaSach.TabIndex = 23;
-            // 
-            // cbbNXB
-            // 
-            this.cbbNXB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbNXB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbNXB.FormattingEnabled = true;
-            this.cbbNXB.Location = new System.Drawing.Point(569, 72);
-            this.cbbNXB.Name = "cbbNXB";
-            this.cbbNXB.Size = new System.Drawing.Size(220, 27);
-            this.cbbNXB.TabIndex = 21;
             // 
             // cbbTenTL
             // 
@@ -516,7 +438,7 @@ namespace QuanLyThuVien
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1189, 641);
+            this.tabPage2.Size = new System.Drawing.Size(1310, 641);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thể loại & NXB";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -527,7 +449,6 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox3.Controls.Add(this.btnHuyNXB);
             this.groupBox3.Controls.Add(this.btnXoaNXB);
             this.groupBox3.Controls.Add(this.btnSuaNXB);
             this.groupBox3.Controls.Add(this.btnThemNXB);
@@ -540,52 +461,45 @@ namespace QuanLyThuVien
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.dgvNXB);
-            this.groupBox3.Location = new System.Drawing.Point(605, 15);
+            this.groupBox3.Location = new System.Drawing.Point(588, 15);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(575, 619);
+            this.groupBox3.Size = new System.Drawing.Size(713, 619);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nhà xuất bản";
             // 
-            // btnHuyNXB
-            // 
-            this.btnHuyNXB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyNXB.Location = new System.Drawing.Point(395, 162);
-            this.btnHuyNXB.Name = "btnHuyNXB";
-            this.btnHuyNXB.Size = new System.Drawing.Size(90, 30);
-            this.btnHuyNXB.TabIndex = 28;
-            this.btnHuyNXB.Text = "Hủy";
-            this.btnHuyNXB.UseVisualStyleBackColor = true;
-            // 
             // btnXoaNXB
             // 
             this.btnXoaNXB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaNXB.Location = new System.Drawing.Point(284, 162);
+            this.btnXoaNXB.Location = new System.Drawing.Point(403, 162);
             this.btnXoaNXB.Name = "btnXoaNXB";
             this.btnXoaNXB.Size = new System.Drawing.Size(90, 30);
             this.btnXoaNXB.TabIndex = 27;
             this.btnXoaNXB.Text = "Xóa";
             this.btnXoaNXB.UseVisualStyleBackColor = true;
+            this.btnXoaNXB.Click += new System.EventHandler(this.btnXoaNXB_Click);
             // 
             // btnSuaNXB
             // 
             this.btnSuaNXB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaNXB.Location = new System.Drawing.Point(174, 162);
+            this.btnSuaNXB.Location = new System.Drawing.Point(293, 162);
             this.btnSuaNXB.Name = "btnSuaNXB";
             this.btnSuaNXB.Size = new System.Drawing.Size(90, 30);
             this.btnSuaNXB.TabIndex = 26;
             this.btnSuaNXB.Text = "Sửa";
             this.btnSuaNXB.UseVisualStyleBackColor = true;
+            this.btnSuaNXB.Click += new System.EventHandler(this.btnSuaNXB_Click);
             // 
             // btnThemNXB
             // 
             this.btnThemNXB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemNXB.Location = new System.Drawing.Point(61, 162);
+            this.btnThemNXB.Location = new System.Drawing.Point(180, 162);
             this.btnThemNXB.Name = "btnThemNXB";
             this.btnThemNXB.Size = new System.Drawing.Size(90, 30);
             this.btnThemNXB.TabIndex = 25;
             this.btnThemNXB.Text = "Thêm";
             this.btnThemNXB.UseVisualStyleBackColor = true;
+            this.btnThemNXB.Click += new System.EventHandler(this.btnThemNXB_Click);
             // 
             // label12
             // 
@@ -601,7 +515,7 @@ namespace QuanLyThuVien
             // 
             this.dtNgayThanhLap.Location = new System.Drawing.Point(222, 124);
             this.dtNgayThanhLap.Name = "dtNgayThanhLap";
-            this.dtNgayThanhLap.Size = new System.Drawing.Size(263, 29);
+            this.dtNgayThanhLap.Size = new System.Drawing.Size(299, 29);
             this.dtNgayThanhLap.TabIndex = 24;
             // 
             // txtDiaChiNXB
@@ -609,7 +523,7 @@ namespace QuanLyThuVien
             this.txtDiaChiNXB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChiNXB.Location = new System.Drawing.Point(222, 92);
             this.txtDiaChiNXB.Name = "txtDiaChiNXB";
-            this.txtDiaChiNXB.Size = new System.Drawing.Size(263, 26);
+            this.txtDiaChiNXB.Size = new System.Drawing.Size(299, 26);
             this.txtDiaChiNXB.TabIndex = 23;
             // 
             // txtTenNXB
@@ -617,7 +531,7 @@ namespace QuanLyThuVien
             this.txtTenNXB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNXB.Location = new System.Drawing.Point(222, 60);
             this.txtTenNXB.Name = "txtTenNXB";
-            this.txtTenNXB.Size = new System.Drawing.Size(263, 26);
+            this.txtTenNXB.Size = new System.Drawing.Size(299, 26);
             this.txtTenNXB.TabIndex = 22;
             // 
             // txtMaNXB
@@ -625,7 +539,7 @@ namespace QuanLyThuVien
             this.txtMaNXB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNXB.Location = new System.Drawing.Point(222, 28);
             this.txtMaNXB.Name = "txtMaNXB";
-            this.txtMaNXB.Size = new System.Drawing.Size(263, 26);
+            this.txtMaNXB.Size = new System.Drawing.Size(299, 26);
             this.txtMaNXB.TabIndex = 18;
             // 
             // label16
@@ -667,44 +581,15 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNXB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNXB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNXB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gvMaNXB2,
-            this.gvTenNXB,
-            this.gvDiaChiNXB,
-            this.gvNgayThanhLapNXB});
             this.dgvNXB.Location = new System.Drawing.Point(0, 198);
             this.dgvNXB.Name = "dgvNXB";
             this.dgvNXB.ReadOnly = true;
-            this.dgvNXB.Size = new System.Drawing.Size(575, 421);
+            this.dgvNXB.Size = new System.Drawing.Size(713, 421);
             this.dgvNXB.TabIndex = 3;
-            // 
-            // gvMaNXB2
-            // 
-            this.gvMaNXB2.HeaderText = "Mã NXB";
-            this.gvMaNXB2.Name = "gvMaNXB2";
-            this.gvMaNXB2.ReadOnly = true;
-            // 
-            // gvTenNXB
-            // 
-            this.gvTenNXB.HeaderText = "Tên NXB";
-            this.gvTenNXB.Name = "gvTenNXB";
-            this.gvTenNXB.ReadOnly = true;
-            // 
-            // gvDiaChiNXB
-            // 
-            this.gvDiaChiNXB.HeaderText = "Địa chỉ";
-            this.gvDiaChiNXB.Name = "gvDiaChiNXB";
-            this.gvDiaChiNXB.ReadOnly = true;
-            // 
-            // gvNgayThanhLapNXB
-            // 
-            this.gvNgayThanhLapNXB.HeaderText = "Ngày thành lập";
-            this.gvNgayThanhLapNXB.Name = "gvNgayThanhLapNXB";
-            this.gvNgayThanhLapNXB.ReadOnly = true;
+            this.dgvNXB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNXB_CellClick);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnHuyTheLoai);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.btnXoaTheLoai);
             this.groupBox2.Controls.Add(this.txtTenTheLoai);
@@ -720,16 +605,6 @@ namespace QuanLyThuVien
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thể loại";
             // 
-            // btnHuyTheLoai
-            // 
-            this.btnHuyTheLoai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyTheLoai.Location = new System.Drawing.Point(387, 162);
-            this.btnHuyTheLoai.Name = "btnHuyTheLoai";
-            this.btnHuyTheLoai.Size = new System.Drawing.Size(90, 30);
-            this.btnHuyTheLoai.TabIndex = 32;
-            this.btnHuyTheLoai.Text = "Hủy";
-            this.btnHuyTheLoai.UseVisualStyleBackColor = true;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -743,12 +618,13 @@ namespace QuanLyThuVien
             // btnXoaTheLoai
             // 
             this.btnXoaTheLoai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTheLoai.Location = new System.Drawing.Point(276, 162);
+            this.btnXoaTheLoai.Location = new System.Drawing.Point(325, 162);
             this.btnXoaTheLoai.Name = "btnXoaTheLoai";
             this.btnXoaTheLoai.Size = new System.Drawing.Size(90, 30);
             this.btnXoaTheLoai.TabIndex = 31;
             this.btnXoaTheLoai.Text = "Xóa";
             this.btnXoaTheLoai.UseVisualStyleBackColor = true;
+            this.btnXoaTheLoai.Click += new System.EventHandler(this.btnXoaTheLoai_Click);
             // 
             // txtTenTheLoai
             // 
@@ -761,22 +637,24 @@ namespace QuanLyThuVien
             // btnSuaTheLoai
             // 
             this.btnSuaTheLoai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaTheLoai.Location = new System.Drawing.Point(166, 162);
+            this.btnSuaTheLoai.Location = new System.Drawing.Point(215, 162);
             this.btnSuaTheLoai.Name = "btnSuaTheLoai";
             this.btnSuaTheLoai.Size = new System.Drawing.Size(90, 30);
             this.btnSuaTheLoai.TabIndex = 30;
             this.btnSuaTheLoai.Text = "Sửa";
             this.btnSuaTheLoai.UseVisualStyleBackColor = true;
+            this.btnSuaTheLoai.Click += new System.EventHandler(this.btnSuaTheLoai_Click);
             // 
             // btnThemTheLoai
             // 
             this.btnThemTheLoai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemTheLoai.Location = new System.Drawing.Point(53, 162);
+            this.btnThemTheLoai.Location = new System.Drawing.Point(102, 162);
             this.btnThemTheLoai.Name = "btnThemTheLoai";
             this.btnThemTheLoai.Size = new System.Drawing.Size(90, 30);
             this.btnThemTheLoai.TabIndex = 29;
             this.btnThemTheLoai.Text = "Thêm";
             this.btnThemTheLoai.UseVisualStyleBackColor = true;
+            this.btnThemTheLoai.Click += new System.EventHandler(this.btnThemTheLoai_Click);
             // 
             // txtMaTheLoai
             // 
@@ -795,26 +673,13 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gvMaTheLoai2,
-            this.gvTenTheLoai});
             this.dgvTheLoai.Location = new System.Drawing.Point(0, 198);
             this.dgvTheLoai.Name = "dgvTheLoai";
             this.dgvTheLoai.ReadOnly = true;
             this.dgvTheLoai.Size = new System.Drawing.Size(575, 421);
             this.dgvTheLoai.TabIndex = 2;
-            // 
-            // gvMaTheLoai2
-            // 
-            this.gvMaTheLoai2.HeaderText = "Mã thể loại";
-            this.gvMaTheLoai2.Name = "gvMaTheLoai2";
-            this.gvMaTheLoai2.ReadOnly = true;
-            // 
-            // gvTenTheLoai
-            // 
-            this.gvTenTheLoai.HeaderText = "Tên thể loại";
-            this.gvTenTheLoai.Name = "gvTenTheLoai";
-            this.gvTenTheLoai.ReadOnly = true;
+            this.dgvTheLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTheLoai_CellClick);
+            this.dgvTheLoai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTheLoai_CellContentClick);
             // 
             // label13
             // 
@@ -845,7 +710,7 @@ namespace QuanLyThuVien
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1197, 719);
+            this.ClientSize = new System.Drawing.Size(1318, 719);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmQLySach";
@@ -893,7 +758,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.DataGridView dgvSach;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtMaSach;
-        private System.Windows.Forms.ComboBox cbbNXB;
         private System.Windows.Forms.ComboBox cbbTenTL;
         private System.Windows.Forms.TextBox txtSoLanMuon;
         private System.Windows.Forms.TextBox txtSoLuongTon;
@@ -917,32 +781,16 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnHuyNXB;
         private System.Windows.Forms.Button btnXoaNXB;
         private System.Windows.Forms.Button btnSuaNXB;
         private System.Windows.Forms.Button btnThemNXB;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtTenTheLoai;
         private System.Windows.Forms.TextBox txtMaTheLoai;
-        private System.Windows.Forms.Button btnHuyTheLoai;
         private System.Windows.Forms.Button btnXoaTheLoai;
         private System.Windows.Forms.Button btnSuaTheLoai;
         private System.Windows.Forms.Button btnThemTheLoai;
         private System.Windows.Forms.ComboBox cbbTinhTrangSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaNXB1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaTheLoai1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvSoLuongTon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvSoLanMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTinhTrangSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaNXB2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTenNXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvDiaChiNXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvNgayThanhLapNXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaTheLoai2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTenTheLoai;
+        private System.Windows.Forms.TextBox txtNXB;
     }
 }
