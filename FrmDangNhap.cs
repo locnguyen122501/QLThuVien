@@ -98,11 +98,16 @@ namespace QuanLyThuVien
             }
         }
 
-        private void btnDangKy_Click(object sender, EventArgs e)
+        /*private void btnDangKy_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmDangKy frmDK = new FrmDangKy();
             frmDK.Show();
+        }*/
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

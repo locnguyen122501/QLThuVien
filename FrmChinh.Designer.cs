@@ -30,6 +30,7 @@ namespace QuanLyThuVien
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChinh));
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanel3 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -122,6 +123,8 @@ namespace QuanLyThuVien
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.CustomFormat = "hh:mm:ss dd/MM/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(591, 4);
             this.dateTimePicker1.MaximumSize = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.MinimumSize = new System.Drawing.Size(200, 20);
@@ -401,6 +404,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanel3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
