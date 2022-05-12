@@ -35,7 +35,6 @@ namespace QuanLyThuVien
             this.btnSuaSach = new System.Windows.Forms.Button();
             this.btnThemSach = new System.Windows.Forms.Button();
             this.btnXoaSach = new System.Windows.Forms.Button();
-            this.btnHuySach = new System.Windows.Forms.Button();
             this.btnTimKiemSach = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -131,7 +130,6 @@ namespace QuanLyThuVien
             this.groupBox4.Controls.Add(this.btnSuaSach);
             this.groupBox4.Controls.Add(this.btnThemSach);
             this.groupBox4.Controls.Add(this.btnXoaSach);
-            this.groupBox4.Controls.Add(this.btnHuySach);
             this.groupBox4.Location = new System.Drawing.Point(904, 40);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(250, 135);
@@ -171,16 +169,6 @@ namespace QuanLyThuVien
             this.btnXoaSach.Text = "Xóa";
             this.btnXoaSach.UseVisualStyleBackColor = true;
             this.btnXoaSach.Click += new System.EventHandler(this.btnXoaSach_Click);
-            // 
-            // btnHuySach
-            // 
-            this.btnHuySach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuySach.Location = new System.Drawing.Point(136, 71);
-            this.btnHuySach.Name = "btnHuySach";
-            this.btnHuySach.Size = new System.Drawing.Size(90, 30);
-            this.btnHuySach.TabIndex = 5;
-            this.btnHuySach.Text = "Hủy";
-            this.btnHuySach.UseVisualStyleBackColor = true;
             // 
             // btnTimKiemSach
             // 
@@ -227,6 +215,7 @@ namespace QuanLyThuVien
             this.dgvSach.Size = new System.Drawing.Size(1310, 364);
             this.dgvSach.TabIndex = 1;
             this.dgvSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSach_CellClick);
+            this.dgvSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSach_CellContentClick);
             // 
             // groupBox1
             // 
@@ -751,7 +740,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnHuySach;
         private System.Windows.Forms.Button btnSuaSach;
         private System.Windows.Forms.Button btnXoaSach;
         private System.Windows.Forms.Button btnThemSach;

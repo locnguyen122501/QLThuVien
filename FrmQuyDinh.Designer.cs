@@ -32,16 +32,13 @@ namespace QuanLyThuVien
             this.label10 = new System.Windows.Forms.Label();
             this.dgvQuyDinh = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSoLuongQuyDinh = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTenQuyDinh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaQuyDinh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
-            this.txtSoLuongQuyDinh = new System.Windows.Forms.TextBox();
-            this.gvMaQuyDinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTenQuyDinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSLQuyDinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuyDinh)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,15 +66,12 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQuyDinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuyDinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuyDinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gvMaQuyDinh,
-            this.gvTenQuyDinh,
-            this.gvSLQuyDinh});
             this.dgvQuyDinh.Location = new System.Drawing.Point(1, 314);
             this.dgvQuyDinh.Name = "dgvQuyDinh";
             this.dgvQuyDinh.ReadOnly = true;
             this.dgvQuyDinh.Size = new System.Drawing.Size(1196, 404);
             this.dgvQuyDinh.TabIndex = 31;
+            this.dgvQuyDinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuyDinh_CellContentClick);
             // 
             // groupBox1
             // 
@@ -98,6 +92,14 @@ namespace QuanLyThuVien
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin quy định";
+            // 
+            // txtSoLuongQuyDinh
+            // 
+            this.txtSoLuongQuyDinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuongQuyDinh.Location = new System.Drawing.Point(543, 71);
+            this.txtSoLuongQuyDinh.Name = "txtSoLuongQuyDinh";
+            this.txtSoLuongQuyDinh.Size = new System.Drawing.Size(220, 26);
+            this.txtSoLuongQuyDinh.TabIndex = 25;
             // 
             // label5
             // 
@@ -154,32 +156,7 @@ namespace QuanLyThuVien
             this.btnSua.TabIndex = 31;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // txtSoLuongQuyDinh
-            // 
-            this.txtSoLuongQuyDinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuongQuyDinh.Location = new System.Drawing.Point(543, 71);
-            this.txtSoLuongQuyDinh.Name = "txtSoLuongQuyDinh";
-            this.txtSoLuongQuyDinh.Size = new System.Drawing.Size(220, 26);
-            this.txtSoLuongQuyDinh.TabIndex = 25;
-            // 
-            // gvMaQuyDinh
-            // 
-            this.gvMaQuyDinh.HeaderText = "Mã quy định";
-            this.gvMaQuyDinh.Name = "gvMaQuyDinh";
-            this.gvMaQuyDinh.ReadOnly = true;
-            // 
-            // gvTenQuyDinh
-            // 
-            this.gvTenQuyDinh.HeaderText = "Tên quy định";
-            this.gvTenQuyDinh.Name = "gvTenQuyDinh";
-            this.gvTenQuyDinh.ReadOnly = true;
-            // 
-            // gvSLQuyDinh
-            // 
-            this.gvSLQuyDinh.HeaderText = "Số lượng quy định";
-            this.gvSLQuyDinh.Name = "gvSLQuyDinh";
-            this.gvSLQuyDinh.ReadOnly = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // FrmQuyDinh
             // 
@@ -193,6 +170,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.label10);
             this.Name = "FrmQuyDinh";
             this.Text = "FrmQuyDinh";
+            this.Load += new System.EventHandler(this.FrmQuyDinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuyDinh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -213,8 +191,5 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.TextBox txtSoLuongQuyDinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaQuyDinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTenQuyDinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvSLQuyDinh;
     }
 }

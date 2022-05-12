@@ -31,8 +31,6 @@ namespace QuanLyThuVien
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.rbNu = new System.Windows.Forms.RadioButton();
-            this.rbNam = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,17 +43,12 @@ namespace QuanLyThuVien
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvThuThu = new System.Windows.Forms.DataGridView();
-            this.gvMaThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvHoTenThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvGioiTinhThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvDiaChiThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvNgaySinhThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSDTThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnSuaTT = new System.Windows.Forms.Button();
             this.btnThemTT = new System.Windows.Forms.Button();
             this.btnXoaTT = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.cbGt = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -67,9 +60,8 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.cbGt);
             this.groupBox1.Controls.Add(this.dtNgaySinh);
-            this.groupBox1.Controls.Add(this.rbNu);
-            this.groupBox1.Controls.Add(this.rbNam);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
@@ -95,30 +87,6 @@ namespace QuanLyThuVien
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.Size = new System.Drawing.Size(220, 29);
             this.dtNgaySinh.TabIndex = 29;
-            // 
-            // rbNu
-            // 
-            this.rbNu.AutoSize = true;
-            this.rbNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNu.Location = new System.Drawing.Point(628, 131);
-            this.rbNu.Name = "rbNu";
-            this.rbNu.Size = new System.Drawing.Size(47, 24);
-            this.rbNu.TabIndex = 28;
-            this.rbNu.TabStop = true;
-            this.rbNu.Text = "Nữ";
-            this.rbNu.UseVisualStyleBackColor = true;
-            // 
-            // rbNam
-            // 
-            this.rbNam.AutoSize = true;
-            this.rbNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNam.Location = new System.Drawing.Point(545, 131);
-            this.rbNam.Name = "rbNam";
-            this.rbNam.Size = new System.Drawing.Size(60, 24);
-            this.rbNam.TabIndex = 27;
-            this.rbNam.TabStop = true;
-            this.rbNam.Text = "Nam";
-            this.rbNam.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -235,54 +203,12 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThuThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThuThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThuThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gvMaThuThu,
-            this.gvHoTenThuThu,
-            this.gvGioiTinhThuThu,
-            this.gvDiaChiThuThu,
-            this.gvNgaySinhThuThu,
-            this.gvSDTThuThu});
             this.dgvThuThu.Location = new System.Drawing.Point(1, 314);
             this.dgvThuThu.Name = "dgvThuThu";
             this.dgvThuThu.ReadOnly = true;
             this.dgvThuThu.Size = new System.Drawing.Size(1196, 404);
             this.dgvThuThu.TabIndex = 29;
-            // 
-            // gvMaThuThu
-            // 
-            this.gvMaThuThu.HeaderText = "Mã thủ thư";
-            this.gvMaThuThu.Name = "gvMaThuThu";
-            this.gvMaThuThu.ReadOnly = true;
-            // 
-            // gvHoTenThuThu
-            // 
-            this.gvHoTenThuThu.HeaderText = "Họ tên";
-            this.gvHoTenThuThu.Name = "gvHoTenThuThu";
-            this.gvHoTenThuThu.ReadOnly = true;
-            // 
-            // gvGioiTinhThuThu
-            // 
-            this.gvGioiTinhThuThu.HeaderText = "Giới tính";
-            this.gvGioiTinhThuThu.Name = "gvGioiTinhThuThu";
-            this.gvGioiTinhThuThu.ReadOnly = true;
-            // 
-            // gvDiaChiThuThu
-            // 
-            this.gvDiaChiThuThu.HeaderText = "Địa chỉ";
-            this.gvDiaChiThuThu.Name = "gvDiaChiThuThu";
-            this.gvDiaChiThuThu.ReadOnly = true;
-            // 
-            // gvNgaySinhThuThu
-            // 
-            this.gvNgaySinhThuThu.HeaderText = "Ngày sinh";
-            this.gvNgaySinhThuThu.Name = "gvNgaySinhThuThu";
-            this.gvNgaySinhThuThu.ReadOnly = true;
-            // 
-            // gvSDTThuThu
-            // 
-            this.gvSDTThuThu.HeaderText = "SĐT";
-            this.gvSDTThuThu.Name = "gvSDTThuThu";
-            this.gvSDTThuThu.ReadOnly = true;
+            this.dgvThuThu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuThu_CellClick);
             // 
             // groupBox4
             // 
@@ -308,6 +234,7 @@ namespace QuanLyThuVien
             this.btnSuaTT.TabIndex = 4;
             this.btnSuaTT.Text = "Sửa";
             this.btnSuaTT.UseVisualStyleBackColor = true;
+            this.btnSuaTT.Click += new System.EventHandler(this.btnSuaTT_Click);
             // 
             // btnThemTT
             // 
@@ -318,6 +245,7 @@ namespace QuanLyThuVien
             this.btnThemTT.TabIndex = 2;
             this.btnThemTT.Text = "Thêm";
             this.btnThemTT.UseVisualStyleBackColor = true;
+            this.btnThemTT.Click += new System.EventHandler(this.btnThemTT_Click);
             // 
             // btnXoaTT
             // 
@@ -328,6 +256,7 @@ namespace QuanLyThuVien
             this.btnXoaTT.TabIndex = 3;
             this.btnXoaTT.Text = "Xóa";
             this.btnXoaTT.UseVisualStyleBackColor = true;
+            this.btnXoaTT.Click += new System.EventHandler(this.btnXoaTT_Click);
             // 
             // btnHuy
             // 
@@ -338,6 +267,14 @@ namespace QuanLyThuVien
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            // 
+            // cbGt
+            // 
+            this.cbGt.FormattingEnabled = true;
+            this.cbGt.Location = new System.Drawing.Point(545, 131);
+            this.cbGt.Name = "cbGt";
+            this.cbGt.Size = new System.Drawing.Size(109, 32);
+            this.cbGt.TabIndex = 30;
             // 
             // FrmThuThu
             // 
@@ -351,6 +288,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmThuThu";
             this.Text = "FrmThuThu";
+            this.Load += new System.EventHandler(this.FrmThuThu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).EndInit();
@@ -364,8 +302,6 @@ namespace QuanLyThuVien
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtNgaySinh;
-        private System.Windows.Forms.RadioButton rbNu;
-        private System.Windows.Forms.RadioButton rbNam;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -383,11 +319,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Button btnThemTT;
         private System.Windows.Forms.Button btnXoaTT;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaThuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvHoTenThuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvGioiTinhThuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvDiaChiThuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvNgaySinhThuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvSDTThuThu;
+        private System.Windows.Forms.ComboBox cbGt;
     }
 }

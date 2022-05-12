@@ -409,7 +409,10 @@ namespace QuanLyThuVien
             catch (Exception) { }
         }
 
-    
+        private void dgvSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
 

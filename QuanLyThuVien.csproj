@@ -78,6 +78,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBQuanLyThuVien.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Docgia.cs" />
     <Compile Include="FrmDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,7 +155,11 @@
     <Compile Include="NXB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quydinh.cs" />
+    <Compile Include="Taikhoan.cs" />
     <Compile Include="Theloai.cs" />
+    <Compile Include="Themuon.cs" />
+    <Compile Include="Thuthu.cs" />
     <EmbeddedResource Include="FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </EmbeddedResource>

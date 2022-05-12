@@ -35,12 +35,9 @@ namespace QuanLyThuVien
             this.btnXoaTT = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.dgvThuThu = new System.Windows.Forms.DataGridView();
-            this.gvMaTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMatKhauTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaThuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvLoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbMaThuThu = new System.Windows.Forms.ComboBox();
+            this.cbbLoaiTaiKhoan = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
@@ -49,9 +46,7 @@ namespace QuanLyThuVien
             this.txtMaTaiKhoan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbbLoaiTaiKhoan = new System.Windows.Forms.ComboBox();
-            this.cbbMaThuThu = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -81,6 +76,7 @@ namespace QuanLyThuVien
             this.btnSuaTT.TabIndex = 4;
             this.btnSuaTT.Text = "Sửa";
             this.btnSuaTT.UseVisualStyleBackColor = true;
+            this.btnSuaTT.Click += new System.EventHandler(this.btnSuaTT_Click);
             // 
             // btnThemTT
             // 
@@ -91,6 +87,7 @@ namespace QuanLyThuVien
             this.btnThemTT.TabIndex = 2;
             this.btnThemTT.Text = "Thêm";
             this.btnThemTT.UseVisualStyleBackColor = true;
+            this.btnThemTT.Click += new System.EventHandler(this.btnThemTT_Click);
             // 
             // btnXoaTT
             // 
@@ -101,6 +98,7 @@ namespace QuanLyThuVien
             this.btnXoaTT.TabIndex = 3;
             this.btnXoaTT.Text = "Xóa";
             this.btnXoaTT.UseVisualStyleBackColor = true;
+            this.btnXoaTT.Click += new System.EventHandler(this.btnXoaTT_Click);
             // 
             // btnHuy
             // 
@@ -121,47 +119,12 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThuThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThuThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThuThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gvMaTK,
-            this.gvTaiKhoan,
-            this.gvMatKhauTK,
-            this.gvMaThuThu,
-            this.gvLoaiTaiKhoan});
             this.dgvThuThu.Location = new System.Drawing.Point(1, 314);
             this.dgvThuThu.Name = "dgvThuThu";
             this.dgvThuThu.ReadOnly = true;
             this.dgvThuThu.Size = new System.Drawing.Size(1196, 404);
             this.dgvThuThu.TabIndex = 30;
-            // 
-            // gvMaTK
-            // 
-            this.gvMaTK.HeaderText = "Mã tài khoản";
-            this.gvMaTK.Name = "gvMaTK";
-            this.gvMaTK.ReadOnly = true;
-            // 
-            // gvTaiKhoan
-            // 
-            this.gvTaiKhoan.HeaderText = "Tài khoản";
-            this.gvTaiKhoan.Name = "gvTaiKhoan";
-            this.gvTaiKhoan.ReadOnly = true;
-            // 
-            // gvMatKhauTK
-            // 
-            this.gvMatKhauTK.HeaderText = "Mật khẩu";
-            this.gvMatKhauTK.Name = "gvMatKhauTK";
-            this.gvMatKhauTK.ReadOnly = true;
-            // 
-            // gvMaThuThu
-            // 
-            this.gvMaThuThu.HeaderText = "Mã thủ thư";
-            this.gvMaThuThu.Name = "gvMaThuThu";
-            this.gvMaThuThu.ReadOnly = true;
-            // 
-            // gvLoaiTaiKhoan
-            // 
-            this.gvLoaiTaiKhoan.HeaderText = "Loại tài khoản";
-            this.gvLoaiTaiKhoan.Name = "gvLoaiTaiKhoan";
-            this.gvLoaiTaiKhoan.ReadOnly = true;
+            this.dgvThuThu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuThu_CellClick);
             // 
             // groupBox1
             // 
@@ -169,7 +132,7 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtPass);
             this.groupBox1.Controls.Add(this.cbbMaThuThu);
             this.groupBox1.Controls.Add(this.cbbLoaiTaiKhoan);
             this.groupBox1.Controls.Add(this.label4);
@@ -186,6 +149,22 @@ namespace QuanLyThuVien
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản";
+            // 
+            // cbbMaThuThu
+            // 
+            this.cbbMaThuThu.FormattingEnabled = true;
+            this.cbbMaThuThu.Location = new System.Drawing.Point(153, 77);
+            this.cbbMaThuThu.Name = "cbbMaThuThu";
+            this.cbbMaThuThu.Size = new System.Drawing.Size(220, 32);
+            this.cbbMaThuThu.TabIndex = 31;
+            // 
+            // cbbLoaiTaiKhoan
+            // 
+            this.cbbLoaiTaiKhoan.FormattingEnabled = true;
+            this.cbbLoaiTaiKhoan.Location = new System.Drawing.Point(153, 121);
+            this.cbbLoaiTaiKhoan.Name = "cbbLoaiTaiKhoan";
+            this.cbbLoaiTaiKhoan.Size = new System.Drawing.Size(220, 32);
+            this.cbbLoaiTaiKhoan.TabIndex = 30;
             // 
             // label4
             // 
@@ -267,29 +246,12 @@ namespace QuanLyThuVien
             this.label10.Text = "Quản lý tài khoản";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cbbLoaiTaiKhoan
+            // txtPass
             // 
-            this.cbbLoaiTaiKhoan.FormattingEnabled = true;
-            this.cbbLoaiTaiKhoan.Location = new System.Drawing.Point(153, 121);
-            this.cbbLoaiTaiKhoan.Name = "cbbLoaiTaiKhoan";
-            this.cbbLoaiTaiKhoan.Size = new System.Drawing.Size(220, 32);
-            this.cbbLoaiTaiKhoan.TabIndex = 30;
-            // 
-            // cbbMaThuThu
-            // 
-            this.cbbMaThuThu.FormattingEnabled = true;
-            this.cbbMaThuThu.Location = new System.Drawing.Point(153, 77);
-            this.cbbMaThuThu.Name = "cbbMaThuThu";
-            this.cbbMaThuThu.Size = new System.Drawing.Size(220, 32);
-            this.cbbMaThuThu.TabIndex = 31;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(545, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 26);
-            this.textBox1.TabIndex = 32;
+            this.txtPass.Location = new System.Drawing.Point(545, 90);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(220, 29);
+            this.txtPass.TabIndex = 32;
             // 
             // FrmTaiKhoan
             // 
@@ -303,6 +265,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.groupBox4);
             this.Name = "FrmTaiKhoan";
             this.Text = "FrmTaiKhoan";
+            this.Load += new System.EventHandler(this.FrmTaiKhoan_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -320,11 +283,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Button btnXoaTT;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.DataGridView dgvThuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaTK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTaiKhoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMatKhauTK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaThuThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvLoaiTaiKhoan;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -336,6 +294,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbbLoaiTaiKhoan;
         private System.Windows.Forms.ComboBox cbbMaThuThu;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPass;
     }
 }

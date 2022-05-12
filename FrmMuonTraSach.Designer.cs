@@ -34,6 +34,7 @@ namespace QuanLyThuVien
             this.btnTraSach = new System.Windows.Forms.Button();
             this.btnXoa2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTimKiem2 = new System.Windows.Forms.Button();
             this.txtMaPhieuTra = new System.Windows.Forms.TextBox();
             this.txtTimKiemSach2 = new System.Windows.Forms.TextBox();
             this.dtNgayTra2 = new System.Windows.Forms.DateTimePicker();
@@ -67,15 +68,8 @@ namespace QuanLyThuVien
             this.btnChoMuon = new System.Windows.Forms.Button();
             this.btnXoa1 = new System.Windows.Forms.Button();
             this.dgvMuonSach = new System.Windows.Forms.DataGridView();
-            this.gvMaPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaSach1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaThe1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSoLuongMuon1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvNgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvNgayTra1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaThuThu1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTimKiem1 = new System.Windows.Forms.Button();
             this.txtTimKiemSach1 = new System.Windows.Forms.TextBox();
             this.dtNgayTra1 = new System.Windows.Forms.DateTimePicker();
             this.dtNgayMuon = new System.Windows.Forms.DateTimePicker();
@@ -95,8 +89,6 @@ namespace QuanLyThuVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.btnTimKiem1 = new System.Windows.Forms.Button();
-            this.btnTimKiem2 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -186,6 +178,16 @@ namespace QuanLyThuVien
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Trả sách";
+            // 
+            // btnTimKiem2
+            // 
+            this.btnTimKiem2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem2.Location = new System.Drawing.Point(677, 174);
+            this.btnTimKiem2.Name = "btnTimKiem2";
+            this.btnTimKiem2.Size = new System.Drawing.Size(112, 30);
+            this.btnTimKiem2.TabIndex = 32;
+            this.btnTimKiem2.Text = "Tìm kiếm";
+            this.btnTimKiem2.UseVisualStyleBackColor = true;
             // 
             // txtMaPhieuTra
             // 
@@ -494,68 +496,11 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMuonSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMuonSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMuonSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gvMaPhieuMuon,
-            this.gvMaSach1,
-            this.gvTenSach,
-            this.gvMaThe1,
-            this.gvSoLuongMuon1,
-            this.gvNgayMuon,
-            this.gvNgayTra1,
-            this.gvMaThuThu1});
             this.dgvMuonSach.Location = new System.Drawing.Point(0, 277);
             this.dgvMuonSach.Name = "dgvMuonSach";
             this.dgvMuonSach.ReadOnly = true;
             this.dgvMuonSach.Size = new System.Drawing.Size(1189, 364);
             this.dgvMuonSach.TabIndex = 1;
-            // 
-            // gvMaPhieuMuon
-            // 
-            this.gvMaPhieuMuon.HeaderText = "Mã phiếu mượn";
-            this.gvMaPhieuMuon.Name = "gvMaPhieuMuon";
-            this.gvMaPhieuMuon.ReadOnly = true;
-            // 
-            // gvMaSach1
-            // 
-            this.gvMaSach1.HeaderText = "Mã sách";
-            this.gvMaSach1.Name = "gvMaSach1";
-            this.gvMaSach1.ReadOnly = true;
-            // 
-            // gvTenSach
-            // 
-            this.gvTenSach.HeaderText = "Tên sách";
-            this.gvTenSach.Name = "gvTenSach";
-            this.gvTenSach.ReadOnly = true;
-            // 
-            // gvMaThe1
-            // 
-            this.gvMaThe1.HeaderText = "Mã thẻ";
-            this.gvMaThe1.Name = "gvMaThe1";
-            this.gvMaThe1.ReadOnly = true;
-            // 
-            // gvSoLuongMuon1
-            // 
-            this.gvSoLuongMuon1.HeaderText = "Số lượng mượn";
-            this.gvSoLuongMuon1.Name = "gvSoLuongMuon1";
-            this.gvSoLuongMuon1.ReadOnly = true;
-            // 
-            // gvNgayMuon
-            // 
-            this.gvNgayMuon.HeaderText = "Ngày mượn";
-            this.gvNgayMuon.Name = "gvNgayMuon";
-            this.gvNgayMuon.ReadOnly = true;
-            // 
-            // gvNgayTra1
-            // 
-            this.gvNgayTra1.HeaderText = "Ngày trả";
-            this.gvNgayTra1.Name = "gvNgayTra1";
-            this.gvNgayTra1.ReadOnly = true;
-            // 
-            // gvMaThuThu1
-            // 
-            this.gvMaThuThu1.HeaderText = "Mã thủ thư";
-            this.gvMaThuThu1.Name = "gvMaThuThu1";
-            this.gvMaThuThu1.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -589,6 +534,16 @@ namespace QuanLyThuVien
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cho mượn sách";
+            // 
+            // btnTimKiem1
+            // 
+            this.btnTimKiem1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem1.Location = new System.Drawing.Point(677, 174);
+            this.btnTimKiem1.Name = "btnTimKiem1";
+            this.btnTimKiem1.Size = new System.Drawing.Size(112, 30);
+            this.btnTimKiem1.TabIndex = 4;
+            this.btnTimKiem1.Text = "Tìm kiếm";
+            this.btnTimKiem1.UseVisualStyleBackColor = true;
             // 
             // txtTimKiemSach1
             // 
@@ -775,26 +730,6 @@ namespace QuanLyThuVien
             this.tabControl1.Size = new System.Drawing.Size(1197, 667);
             this.tabControl1.TabIndex = 1;
             // 
-            // btnTimKiem1
-            // 
-            this.btnTimKiem1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem1.Location = new System.Drawing.Point(677, 174);
-            this.btnTimKiem1.Name = "btnTimKiem1";
-            this.btnTimKiem1.Size = new System.Drawing.Size(112, 30);
-            this.btnTimKiem1.TabIndex = 4;
-            this.btnTimKiem1.Text = "Tìm kiếm";
-            this.btnTimKiem1.UseVisualStyleBackColor = true;
-            // 
-            // btnTimKiem2
-            // 
-            this.btnTimKiem2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem2.Location = new System.Drawing.Point(677, 174);
-            this.btnTimKiem2.Name = "btnTimKiem2";
-            this.btnTimKiem2.Size = new System.Drawing.Size(112, 30);
-            this.btnTimKiem2.TabIndex = 32;
-            this.btnTimKiem2.Text = "Tìm kiếm";
-            this.btnTimKiem2.UseVisualStyleBackColor = true;
-            // 
             // FrmMuonTraSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -881,14 +816,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn gvNgayTra2;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvTinhTrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn gvMaThuThu2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaPhieuMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaSach1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaThe1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvSoLuongMuon1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvNgayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvNgayTra1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaThuThu1;
         private System.Windows.Forms.TextBox txtMaPhieuTra;
         private System.Windows.Forms.Button btnTimKiem2;
         private System.Windows.Forms.Button btnTimKiem1;
