@@ -24,15 +24,15 @@ namespace QuanLyThuVien
             txtTenTaiKhoan.Focus();
         }
 
-        /*private void GetAll()
+        private void GetAll()
         {
-
             //Tạo ra một đối tượng client để kết nối 
             WebClient client = new WebClient();
             client.Encoding = System.Text.Encoding.UTF8;
             String json = client.DownloadString(URI); //HTTp GET, tạo Http Request, format json 
             tk = JsonConvert.DeserializeObject<List<Taikhoan>>(json); //Chuyển từ list thành đối tượng 
-        }*/
+           
+        }
 
         private void FrmDangNhap_Load(object sender, EventArgs e)
         {
@@ -84,7 +84,11 @@ namespace QuanLyThuVien
             }
             else
             {
-                GetAll();
+                
+                
+                
+                //khac
+                /*GetAll();
                 string tk = txtTenTaiKhoan.Text;
                 string mk = txtMatKhau.Text;
                 
@@ -92,6 +96,34 @@ namespace QuanLyThuVien
                 if(check == null)
                 {
 
+                }
+                //"khac" het tai day
+
+
+
+                check = tk.SingleOrDefault(p => p.TK.Equals(txtTenTaiKhoan.Text.Trim()) && p.MK.Equals(txtMatKhau.Text.Trim()));
+                if (check == null)
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng. Vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+                else
+                {
+                    checkrole = tk.SingleOrDefault(p => p.Quyen.Equals("User"));
+                    //tk checkrole = tk.Where(p => p.Quyen.Equals("User")).ToList();
+                    if(checkrole == null)
+                    {
+                        MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        FrmQuanLy frmQL = new FrmQuanLy();
+                        frmQL.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        FrmChinh frmMain = new FrmChinh();
+                        frmMain.ShowDialog();
+                    }    
                 }
             }*/
 
