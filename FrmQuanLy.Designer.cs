@@ -367,6 +367,7 @@ namespace QuanLyThuVien
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackgroundImage = global::QuanLyThuVien.Properties.Resources.hutech_banner_test;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(184, 57);
             this.panel1.Name = "panel1";

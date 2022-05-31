@@ -95,11 +95,20 @@ namespace QuanLyThuVien
             {
                 e.Cancel = true;
             }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void dockManager1_Sizing(object sender, DevExpress.XtraBars.Docking.SizingEventArgs e)
         {
             e.Cancel = true;
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -30,6 +30,7 @@ namespace QuanLyThuVien
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbGt = new System.Windows.Forms.ComboBox();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@ namespace QuanLyThuVien
             this.btnThemTT = new System.Windows.Forms.Button();
             this.btnXoaTT = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.cbGt = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -56,9 +56,6 @@ namespace QuanLyThuVien
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.cbGt);
             this.groupBox1.Controls.Add(this.dtNgaySinh);
@@ -75,14 +72,24 @@ namespace QuanLyThuVien
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(28, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(818, 232);
+            this.groupBox1.Size = new System.Drawing.Size(818, 181);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thủ thư";
             // 
+            // cbGt
+            // 
+            this.cbGt.FormattingEnabled = true;
+            this.cbGt.Location = new System.Drawing.Point(545, 131);
+            this.cbGt.Name = "cbGt";
+            this.cbGt.Size = new System.Drawing.Size(109, 32);
+            this.cbGt.TabIndex = 30;
+            // 
             // dtNgaySinh
             // 
             this.dtNgaySinh.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgaySinh.Location = new System.Drawing.Point(545, 80);
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.Size = new System.Drawing.Size(220, 29);
@@ -267,14 +274,6 @@ namespace QuanLyThuVien
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // cbGt
-            // 
-            this.cbGt.FormattingEnabled = true;
-            this.cbGt.Location = new System.Drawing.Point(545, 131);
-            this.cbGt.Name = "cbGt";
-            this.cbGt.Size = new System.Drawing.Size(109, 32);
-            this.cbGt.TabIndex = 30;
             // 
             // FrmThuThu
             // 

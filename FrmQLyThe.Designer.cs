@@ -37,16 +37,16 @@ namespace QuanLyThuVien
             this.btnHuy = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMaTT = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMa = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.dtNgayCapThe = new System.Windows.Forms.DateTimePicker();
             this.dtNgayHetHan = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMaThe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMa = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMaTT = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -145,6 +145,7 @@ namespace QuanLyThuVien
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.txtMaTT);
             this.groupBox1.Controls.Add(this.label6);
@@ -159,10 +160,46 @@ namespace QuanLyThuVien
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(28, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(818, 232);
+            this.groupBox1.Size = new System.Drawing.Size(771, 191);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thẻ";
+            // 
+            // txtMaTT
+            // 
+            this.txtMaTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTT.Location = new System.Drawing.Point(136, 137);
+            this.txtMaTT.Name = "txtMaTT";
+            this.txtMaTT.Size = new System.Drawing.Size(220, 26);
+            this.txtMaTT.TabIndex = 34;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(59, 144);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 19);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Mã TT:";
+            // 
+            // txtMa
+            // 
+            this.txtMa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMa.Location = new System.Drawing.Point(136, 87);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(220, 26);
+            this.txtMa.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(42, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 19);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Mã Độc Giả:";
             // 
             // dtNgayCapThe
             // 
@@ -217,42 +254,6 @@ namespace QuanLyThuVien
             this.label1.Size = new System.Drawing.Size(55, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã thẻ:";
-            // 
-            // txtMa
-            // 
-            this.txtMa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMa.Location = new System.Drawing.Point(136, 87);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(220, 26);
-            this.txtMa.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 19);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Mã Độc Giả:";
-            // 
-            // txtMaTT
-            // 
-            this.txtMaTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaTT.Location = new System.Drawing.Point(136, 137);
-            this.txtMaTT.Name = "txtMaTT";
-            this.txtMaTT.Size = new System.Drawing.Size(220, 26);
-            this.txtMaTT.TabIndex = 34;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(59, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 19);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Mã TT:";
             // 
             // FrmQLyThe
             // 

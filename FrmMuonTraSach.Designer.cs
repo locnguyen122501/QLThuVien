@@ -54,15 +54,6 @@ namespace QuanLyThuVien
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.dgvTraSach = new System.Windows.Forms.DataGridView();
-            this.gvMaPhieuTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaThe2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSoLuongMuon2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSoLuongTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvNgayTra2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMaThuThu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnChoMuon = new System.Windows.Forms.Button();
@@ -113,6 +104,7 @@ namespace QuanLyThuVien
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Trả sách";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // groupBox3
             // 
@@ -371,75 +363,11 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTraSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTraSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTraSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gvMaPhieuTra,
-            this.gvMaDocGia,
-            this.gvMaThe2,
-            this.gvMaSach2,
-            this.gvSoLuongMuon2,
-            this.gvSoLuongTra,
-            this.gvNgayTra2,
-            this.gvTinhTrang,
-            this.gvMaThuThu2});
-            this.dgvTraSach.Location = new System.Drawing.Point(0, 277);
+            this.dgvTraSach.Location = new System.Drawing.Point(-3, 271);
             this.dgvTraSach.Name = "dgvTraSach";
             this.dgvTraSach.ReadOnly = true;
             this.dgvTraSach.Size = new System.Drawing.Size(1189, 364);
             this.dgvTraSach.TabIndex = 2;
-            // 
-            // gvMaPhieuTra
-            // 
-            this.gvMaPhieuTra.HeaderText = "Mã phiếu trả";
-            this.gvMaPhieuTra.Name = "gvMaPhieuTra";
-            this.gvMaPhieuTra.ReadOnly = true;
-            // 
-            // gvMaDocGia
-            // 
-            this.gvMaDocGia.HeaderText = "Mã đọc giả";
-            this.gvMaDocGia.Name = "gvMaDocGia";
-            this.gvMaDocGia.ReadOnly = true;
-            // 
-            // gvMaThe2
-            // 
-            this.gvMaThe2.HeaderText = "Mã thẻ";
-            this.gvMaThe2.Name = "gvMaThe2";
-            this.gvMaThe2.ReadOnly = true;
-            // 
-            // gvMaSach2
-            // 
-            this.gvMaSach2.HeaderText = "Mã sách";
-            this.gvMaSach2.Name = "gvMaSach2";
-            this.gvMaSach2.ReadOnly = true;
-            // 
-            // gvSoLuongMuon2
-            // 
-            this.gvSoLuongMuon2.HeaderText = "Số lượng mượn";
-            this.gvSoLuongMuon2.Name = "gvSoLuongMuon2";
-            this.gvSoLuongMuon2.ReadOnly = true;
-            // 
-            // gvSoLuongTra
-            // 
-            this.gvSoLuongTra.HeaderText = "Số lượng trả";
-            this.gvSoLuongTra.Name = "gvSoLuongTra";
-            this.gvSoLuongTra.ReadOnly = true;
-            // 
-            // gvNgayTra2
-            // 
-            this.gvNgayTra2.HeaderText = "Ngày trả";
-            this.gvNgayTra2.Name = "gvNgayTra2";
-            this.gvNgayTra2.ReadOnly = true;
-            // 
-            // gvTinhTrang
-            // 
-            this.gvTinhTrang.HeaderText = "Tình trạng";
-            this.gvTinhTrang.Name = "gvTinhTrang";
-            this.gvTinhTrang.ReadOnly = true;
-            // 
-            // gvMaThuThu2
-            // 
-            this.gvMaThuThu2.HeaderText = "Mã thủ thư";
-            this.gvMaThuThu2.Name = "gvMaThuThu2";
-            this.gvMaThuThu2.ReadOnly = true;
             // 
             // tabPage1
             // 
@@ -501,6 +429,7 @@ namespace QuanLyThuVien
             this.dgvMuonSach.ReadOnly = true;
             this.dgvMuonSach.Size = new System.Drawing.Size(1189, 364);
             this.dgvMuonSach.TabIndex = 1;
+            this.dgvMuonSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMuonSach_CellContentClick);
             // 
             // groupBox1
             // 
@@ -808,15 +737,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaPhieuTra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaThe2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaSach2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvSoLuongMuon2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvSoLuongTra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvNgayTra2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvTinhTrang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gvMaThuThu2;
         private System.Windows.Forms.TextBox txtMaPhieuTra;
         private System.Windows.Forms.Button btnTimKiem2;
         private System.Windows.Forms.Button btnTimKiem1;

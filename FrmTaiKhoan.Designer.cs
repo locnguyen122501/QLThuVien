@@ -36,6 +36,7 @@ namespace QuanLyThuVien
             this.btnHuy = new System.Windows.Forms.Button();
             this.dgvThuThu = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.cbbMaThuThu = new System.Windows.Forms.ComboBox();
             this.cbbLoaiTaiKhoan = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@ namespace QuanLyThuVien
             this.txtMaTaiKhoan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -128,9 +128,6 @@ namespace QuanLyThuVien
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.txtPass);
             this.groupBox1.Controls.Add(this.cbbMaThuThu);
@@ -145,10 +142,17 @@ namespace QuanLyThuVien
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(28, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(818, 232);
+            this.groupBox1.Size = new System.Drawing.Size(818, 181);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(545, 90);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(220, 29);
+            this.txtPass.TabIndex = 32;
             // 
             // cbbMaThuThu
             // 
@@ -245,13 +249,6 @@ namespace QuanLyThuVien
             this.label10.TabIndex = 33;
             this.label10.Text = "Quản lý tài khoản";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(545, 90);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(220, 29);
-            this.txtPass.TabIndex = 32;
             // 
             // FrmTaiKhoan
             // 
