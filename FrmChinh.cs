@@ -24,7 +24,7 @@ namespace QuanLyThuVien
             InitializeComponent();
         }
 
-        private void GetAll()
+        private void GetAllCategory()
         {
             //Tạo ra một đối tượng client để kết nối 
             WebClient client = new WebClient();
@@ -39,7 +39,7 @@ namespace QuanLyThuVien
             this.dockPanel2.Options.ShowCloseButton = false;
             this.dockPanel3.Options.ShowAutoHideButton = false;
             this.dockPanel3.Options.ShowCloseButton = false;
-            GetAll();
+            GetAllCategory();
             navBarRoot.ItemLinks.Clear();
             foreach (var category in categories)
             {
@@ -115,22 +115,28 @@ namespace QuanLyThuVien
             }
         }
 
+
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            FrmChinh_FormClosing(null,null);
         }
 
         private void FrmChinh_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var result = MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
+            if(e == null)
             {
-                e.Cancel = true;
+                var result = MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Application.Exit();
+                }
             }
-            else
-            {
-                Application.Exit();
-            }
+            
         }
 
         private void dockManager1_Sizing(object sender, DevExpress.XtraBars.Docking.SizingEventArgs e)
@@ -140,17 +146,6 @@ namespace QuanLyThuVien
 
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void navBarControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            var navBar = e.Link.Caption;
 
         }
 

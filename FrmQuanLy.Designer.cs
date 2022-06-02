@@ -47,7 +47,7 @@ namespace QuanLyThuVien
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarRoot = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
@@ -233,9 +233,9 @@ namespace QuanLyThuVien
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup2;
+            this.navBarControl1.ActiveGroup = this.navBarRoot;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup2});
+            this.navBarRoot});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItem1,
             this.navBarItem2,
@@ -260,11 +260,11 @@ namespace QuanLyThuVien
             this.navBarControl1.TabIndex = 3;
             this.navBarControl1.Text = "navBarControl1";
             // 
-            // navBarGroup2
+            // navBarRoot
             // 
-            this.navBarGroup2.Caption = "Danh mục sách";
-            this.navBarGroup2.Expanded = true;
-            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            this.navBarRoot.Caption = "Danh mục sách";
+            this.navBarRoot.Expanded = true;
+            this.navBarRoot.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
@@ -281,7 +281,7 @@ namespace QuanLyThuVien
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem14),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem15),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem16)});
-            this.navBarGroup2.Name = "navBarGroup2";
+            this.navBarRoot.Name = "navBarRoot";
             // 
             // navBarItem1
             // 
@@ -416,7 +416,7 @@ namespace QuanLyThuVien
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarGroup navBarRoot;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;

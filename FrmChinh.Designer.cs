@@ -36,7 +36,6 @@ namespace QuanLyThuVien
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thẻToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -136,7 +135,6 @@ namespace QuanLyThuVien
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tàiKhoảnToolStripMenuItem,
             this.abcToolStripMenuItem,
             this.defToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -144,13 +142,6 @@ namespace QuanLyThuVien
             this.menuStrip1.Size = new System.Drawing.Size(794, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tàiKhoảnToolStripMenuItem
-            // 
-            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
-            this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
             // abcToolStripMenuItem
             // 
@@ -165,21 +156,21 @@ namespace QuanLyThuVien
             // sáchToolStripMenuItem
             // 
             this.sáchToolStripMenuItem.Name = "sáchToolStripMenuItem";
-            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sáchToolStripMenuItem.Text = "Sách";
             this.sáchToolStripMenuItem.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
             // 
             // thẻToolStripMenuItem
             // 
             this.thẻToolStripMenuItem.Name = "thẻToolStripMenuItem";
-            this.thẻToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.thẻToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.thẻToolStripMenuItem.Text = "Thẻ";
             this.thẻToolStripMenuItem.Click += new System.EventHandler(this.thẻToolStripMenuItem_Click);
             // 
             // đọcGiảToolStripMenuItem
             // 
             this.đọcGiảToolStripMenuItem.Name = "đọcGiảToolStripMenuItem";
-            this.đọcGiảToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.đọcGiảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đọcGiảToolStripMenuItem.Text = "Đọc giả";
             this.đọcGiảToolStripMenuItem.Click += new System.EventHandler(this.đọcGiảToolStripMenuItem_Click);
             // 
@@ -279,7 +270,6 @@ namespace QuanLyThuVien
             this.navBarControl1.Size = new System.Drawing.Size(177, 430);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
-            this.navBarControl1.Click += new System.EventHandler(this.navBarControl1_Click);
             // 
             // navBarRoot
             // 
@@ -308,7 +298,6 @@ namespace QuanLyThuVien
             // 
             this.navBarItem1.Caption = "An toàn thông tin";
             this.navBarItem1.Name = "navBarItem1";
-            this.navBarItem1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem1_LinkClicked);
             // 
             // navBarItem2
             // 
@@ -444,7 +433,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.ToolStripMenuItem defToolStripMenuItem;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarRoot;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
