@@ -44,6 +44,7 @@ namespace QuanLyThuVien
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
@@ -67,6 +68,7 @@ namespace QuanLyThuVien
             this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel3.SuspendLayout();
             this.dockPanel3_Container.SuspendLayout();
@@ -156,21 +158,21 @@ namespace QuanLyThuVien
             // sáchToolStripMenuItem
             // 
             this.sáchToolStripMenuItem.Name = "sáchToolStripMenuItem";
-            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.sáchToolStripMenuItem.Text = "Sách";
             this.sáchToolStripMenuItem.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
             // 
             // thẻToolStripMenuItem
             // 
             this.thẻToolStripMenuItem.Name = "thẻToolStripMenuItem";
-            this.thẻToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thẻToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.thẻToolStripMenuItem.Text = "Thẻ";
             this.thẻToolStripMenuItem.Click += new System.EventHandler(this.thẻToolStripMenuItem_Click);
             // 
             // đọcGiảToolStripMenuItem
             // 
             this.đọcGiảToolStripMenuItem.Name = "đọcGiảToolStripMenuItem";
-            this.đọcGiảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đọcGiảToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.đọcGiảToolStripMenuItem.Text = "Đọc giả";
             this.đọcGiảToolStripMenuItem.Click += new System.EventHandler(this.đọcGiảToolStripMenuItem_Click);
             // 
@@ -189,7 +191,7 @@ namespace QuanLyThuVien
             this.dockPanel2.Location = new System.Drawing.Point(0, 57);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.OriginalSize = new System.Drawing.Size(184, 161);
-            this.dockPanel2.Size = new System.Drawing.Size(184, 607);
+            this.dockPanel2.Size = new System.Drawing.Size(184, 654);
             // 
             // dockPanel2_Container
             // 
@@ -197,20 +199,32 @@ namespace QuanLyThuVien
             this.dockPanel2_Container.Controls.Add(this.navBarControl1);
             this.dockPanel2_Container.Location = new System.Drawing.Point(3, 26);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(177, 578);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(177, 625);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnDangXuat);
             this.groupBox1.Location = new System.Drawing.Point(0, 436);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(177, 145);
+            this.groupBox1.Size = new System.Drawing.Size(177, 454);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng khác";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 170);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "HutechLib v1.12.06";
             // 
             // pictureBox1
             // 
@@ -268,6 +282,7 @@ namespace QuanLyThuVien
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 177;
             this.navBarControl1.Size = new System.Drawing.Size(177, 430);
+            this.navBarControl1.StoreDefaultPaintStyleName = true;
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -386,15 +401,23 @@ namespace QuanLyThuVien
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(184, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(616, 607);
+            this.panel1.Size = new System.Drawing.Size(616, 654);
             this.panel1.TabIndex = 2;
+            // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
             // 
             // FrmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 664);
+            this.ClientSize = new System.Drawing.Size(800, 711);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanel3);
@@ -404,7 +427,6 @@ namespace QuanLyThuVien
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thư viện Hutech";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmChinh_FormClosing);
             this.Load += new System.EventHandler(this.FrmChinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel3.ResumeLayout(false);
@@ -415,6 +437,7 @@ namespace QuanLyThuVien
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.ResumeLayout(false);
@@ -459,5 +482,7 @@ namespace QuanLyThuVien
         private System.Windows.Forms.ToolStripMenuItem sáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đọcGiảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thẻToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }
 }

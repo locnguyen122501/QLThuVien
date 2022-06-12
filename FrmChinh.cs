@@ -39,6 +39,7 @@ namespace QuanLyThuVien
             this.dockPanel2.Options.ShowCloseButton = false;
             this.dockPanel3.Options.ShowAutoHideButton = false;
             this.dockPanel3.Options.ShowCloseButton = false;
+            
             GetAllCategory();
             navBarRoot.ItemLinks.Clear();
             foreach (var category in categories)
@@ -118,26 +119,13 @@ namespace QuanLyThuVien
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            FrmChinh_FormClosing(null, null); //truyen gia tri null vao e sang FormClosing
-        }
-
-        private void FrmChinh_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e == null) //Neu e = null thi co nghia event nut thoat dang duoc xai
+            var result = MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                var result = MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo);
-                if (result == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    Application.Exit();
-                }
+                Application.Exit();
             }
-
         }
+
 
         private void dockManager1_Sizing(object sender, DevExpress.XtraBars.Docking.SizingEventArgs e)
         {

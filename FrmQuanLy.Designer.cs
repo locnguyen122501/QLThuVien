@@ -65,6 +65,7 @@ namespace QuanLyThuVien
             this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -178,7 +179,7 @@ namespace QuanLyThuVien
             this.dockPanel2.Location = new System.Drawing.Point(0, 57);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.OriginalSize = new System.Drawing.Size(184, 200);
-            this.dockPanel2.Size = new System.Drawing.Size(184, 607);
+            this.dockPanel2.Size = new System.Drawing.Size(184, 654);
             // 
             // dockPanel2_Container
             // 
@@ -186,17 +187,20 @@ namespace QuanLyThuVien
             this.dockPanel2_Container.Controls.Add(this.navBarControl1);
             this.dockPanel2_Container.Location = new System.Drawing.Point(3, 26);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(177, 578);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(177, 625);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnDangXuat);
             this.groupBox1.Location = new System.Drawing.Point(0, 436);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(177, 145);
+            this.groupBox1.Size = new System.Drawing.Size(177, 192);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng khác";
@@ -371,15 +375,24 @@ namespace QuanLyThuVien
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(184, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(616, 607);
+            this.panel1.Size = new System.Drawing.Size(616, 654);
             this.panel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 170);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "HutechLib v1.12.06";
             // 
             // FrmQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 664);
+            this.ClientSize = new System.Drawing.Size(800, 711);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanel1);
@@ -390,7 +403,6 @@ namespace QuanLyThuVien
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thư viện Hutech";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmQuanLy_FormClosing);
             this.Load += new System.EventHandler(this.FrmQuanLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
@@ -401,6 +413,7 @@ namespace QuanLyThuVien
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.ResumeLayout(false);
@@ -443,5 +456,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Label label1;
     }
 }

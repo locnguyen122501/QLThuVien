@@ -25,7 +25,6 @@ namespace QuanLyThuVien
             {
                 return Text;
             }
-
         }
 
 
@@ -73,6 +72,7 @@ namespace QuanLyThuVien
 
         private void FrmQLySach_Load(object sender, EventArgs e)
         {
+            GetAllCategory();
             GetAll();
         }
 
@@ -102,18 +102,11 @@ namespace QuanLyThuVien
 
             dgvSach.DataSource = bookFilter;
 
-
-
-
-
             //Tacgia
             WebClient client2 = new WebClient();
             String json2 = client.DownloadString(URI2);
             nxb = JsonConvert.DeserializeObject<List<NXB>>(json2);
             dgvNXB.DataSource = nxb;
-
-
-
 
             //Theloai
             WebClient client3 = new WebClient();
@@ -127,7 +120,6 @@ namespace QuanLyThuVien
         {
             try
             {
-
                 // Get new Id
                 int newId = books.OrderByDescending(n => n.MaSach).Select(n => n.MaSach).FirstOrDefault() + 1;
                 System.Object[] ItemObject = new System.Object[10];
@@ -308,7 +300,6 @@ namespace QuanLyThuVien
         {
             try
             {
-
                 Theloai newTL = new Theloai()
                 {
                     //Mã số tự động sinh ra nên cho bằng không 
@@ -373,8 +364,6 @@ namespace QuanLyThuVien
         }
 
 
-
-
         // Click để ra thông tin
         private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -390,8 +379,6 @@ namespace QuanLyThuVien
                 txtSoLuongTon.Text = row.Cells[6].Value.ToString();
                 txtSoLanMuon.Text = row.Cells[7].Value.ToString();
                 cbbTinhTrangSach.Text = row.Cells[8].Value.ToString();
-
-
             }
         }
 
@@ -420,18 +407,13 @@ namespace QuanLyThuVien
         //
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-
-            //  string rowFilter = string.Format("{0} like '{1}'", "Name", "*" + txtTimKiem.Text + "*");
-            //  ((DataTable)dgvSach.DataSource).DefaultView.RowFilter = string.Format("TenSach like '%{0}%'", txtTimKiem.Text.Trim().Replace("'", "''"));
-            // btnTimKiemSach_Click(sender, e);
             dgvSach.DataSource = books.Where(p => p.TenSach.ToLower().Contains(txtTimKiem.Text.Trim().ToLower())).ToList();
         }
 
-        private void btnTimKiemSach_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e) //load lại table sách
         {
             try
             {
-
                 dgvSach.DataSource = books.Where(p => p.TenSach.ToLower().Contains(txtTimKiem.Text.Trim().ToLower())).ToList();
 
             }

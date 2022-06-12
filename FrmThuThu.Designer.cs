@@ -70,7 +70,7 @@ namespace QuanLyThuVien
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtHoTenThuThu);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(28, 71);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(818, 181);
@@ -83,7 +83,7 @@ namespace QuanLyThuVien
             this.cbGt.FormattingEnabled = true;
             this.cbGt.Location = new System.Drawing.Point(545, 131);
             this.cbGt.Name = "cbGt";
-            this.cbGt.Size = new System.Drawing.Size(109, 32);
+            this.cbGt.Size = new System.Drawing.Size(109, 29);
             this.cbGt.TabIndex = 30;
             // 
             // dtNgaySinh
@@ -194,10 +194,10 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(487, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(225, 39);
+            this.label10.Size = new System.Drawing.Size(218, 37);
             this.label10.TabIndex = 20;
             this.label10.Text = "Quản lý thủ thư";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,7 +225,7 @@ namespace QuanLyThuVien
             this.groupBox4.Controls.Add(this.btnThemTT);
             this.groupBox4.Controls.Add(this.btnXoaTT);
             this.groupBox4.Controls.Add(this.btnHuy);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(904, 71);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(250, 135);

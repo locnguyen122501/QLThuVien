@@ -106,23 +106,10 @@ namespace QuanLyThuVien
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            FrmQuanLy_FormClosing(null, null);
-        }
-
-        private void FrmQuanLy_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e == null)
+            var result = MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                var result = MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo);
-                if (result == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    Application.Exit();
-                }
+                Application.Exit();
             }
         }
 

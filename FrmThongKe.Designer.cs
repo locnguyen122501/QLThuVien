@@ -59,10 +59,10 @@ namespace QuanLyThuVien
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(487, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 39);
+            this.label10.Size = new System.Drawing.Size(135, 37);
             this.label10.TabIndex = 30;
             this.label10.Text = "Thống kê";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,19 +83,20 @@ namespace QuanLyThuVien
             // 
             // cbbSoSach
             // 
+            this.cbbSoSach.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSoSach.FormattingEnabled = true;
             this.cbbSoSach.Location = new System.Drawing.Point(812, 120);
             this.cbbSoSach.Name = "cbbSoSach";
-            this.cbbSoSach.Size = new System.Drawing.Size(73, 21);
+            this.cbbSoSach.Size = new System.Drawing.Size(73, 22);
             this.cbbSoSach.TabIndex = 33;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(891, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 20);
+            this.label1.Size = new System.Drawing.Size(208, 19);
             this.label1.TabIndex = 34;
             this.label1.Text = "cuốn sách được mượn nhiều nhất";
             // 

@@ -81,6 +81,7 @@ namespace QuanLyThuVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -112,6 +113,7 @@ namespace QuanLyThuVien
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox3.Controls.Add(this.btnTraSach);
             this.groupBox3.Controls.Add(this.btnXoa2);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(904, 40);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(250, 135);
@@ -170,6 +172,7 @@ namespace QuanLyThuVien
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(58, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(804, 243);
@@ -375,7 +378,7 @@ namespace QuanLyThuVien
             this.dgvTraSach.Location = new System.Drawing.Point(-3, 271);
             this.dgvTraSach.Name = "dgvTraSach";
             this.dgvTraSach.ReadOnly = true;
-            this.dgvTraSach.Size = new System.Drawing.Size(1189, 364);
+            this.dgvTraSach.Size = new System.Drawing.Size(1189, 374);
             this.dgvTraSach.TabIndex = 2;
             // 
             // tabPage1
@@ -397,6 +400,7 @@ namespace QuanLyThuVien
             this.groupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox4.Controls.Add(this.btnChoMuon);
             this.groupBox4.Controls.Add(this.btnXoa1);
+            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(904, 40);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(250, 135);
@@ -471,6 +475,7 @@ namespace QuanLyThuVien
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(58, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(802, 247);
@@ -572,6 +577,7 @@ namespace QuanLyThuVien
             this.txtSoLuongMuon1.Name = "txtSoLuongMuon1";
             this.txtSoLuongMuon1.Size = new System.Drawing.Size(220, 26);
             this.txtSoLuongMuon1.TabIndex = 19;
+            this.txtSoLuongMuon1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuongMuon1_KeyPress);
             // 
             // label9
             // 
@@ -676,12 +682,27 @@ namespace QuanLyThuVien
             this.tabControl1.Size = new System.Drawing.Size(1197, 667);
             this.tabControl1.TabIndex = 1;
             // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(487, 9);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(311, 37);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "Quản lý mượn trả sách";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmMuonTraSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1197, 719);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmMuonTraSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -701,6 +722,7 @@ namespace QuanLyThuVien
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -757,5 +779,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.TextBox txtMaPhieuTra;
         private System.Windows.Forms.Button btnTimKiem2;
         private System.Windows.Forms.Button btnTimKiem1;
+        private System.Windows.Forms.Label label19;
     }
 }
