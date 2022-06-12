@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9EF3F33-6329-4645-8EFC-DD883C871E8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyThuVien</RootNamespace>
+    <AssemblyName>QuanLyThuVien</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Book.cs" />
+    <Compile Include="DBQuanLyThuVien.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBQuanLyThuVien.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Docgia.cs" />
+    <Compile Include="FrmDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDocGia.Designer.cs">
+      <DependentUpon>FrmDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMuonTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMuonTraSach.Designer.cs">
+      <DependentUpon>FrmMuonTraSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQLyThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQLyThe.Designer.cs">
+      <DependentUpon>FrmQLyThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLy.Designer.cs">
+      <DependentUpon>FrmQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuyDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuyDinh.Designer.cs">
+      <DependentUpon>FrmQuyDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTaiKhoan.Designer.cs">
+      <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongKe.Designer.cs">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThuThu.Designer.cs">
+      <DependentUpon>FrmThuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChinh.Designer.cs">
+      <DependentUpon>FrmChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQLySach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQLySach.Designer.cs">
+      <DependentUpon>FrmQLySach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs" />
+    <Compile Include="NXB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quydinh.cs" />
+    <Compile Include="Taikhoan.cs" />
+    <Compile Include="Theloai.cs" />
+    <Compile Include="Themuon.cs" />
+    <Compile Include="Thuthu.cs" />
+    <EmbeddedResource Include="FrmChinh.resx">
+      <DependentUpon>FrmChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDocGia.resx">
+      <DependentUpon>FrmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMuonTraSach.resx">
+      <DependentUpon>FrmMuonTraSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQLySach.resx">
+      <DependentUpon>FrmQLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQLyThe.resx">
+      <DependentUpon>FrmQLyThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLy.resx">
+      <DependentUpon>FrmQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuyDinh.resx">
+      <DependentUpon>FrmQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTaiKhoan.resx">
+      <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongKe.resx">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThuThu.resx">
+      <DependentUpon>FrmThuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="API\node_modules\.bin\mime" />
+    <None Include="API\node_modules\.bin\mime.cmd" />
+    <None Include="API\node_modules\.bin\mime.ps1" />
+    <None Include="API\node_modules\.package-lock.json" />
+    <None Include="API\node_modules\accepts\HISTORY.md" />
+    <None Include="API\node_modules\accepts\LICENSE" />
+    <None Include="API\node_modules\accepts\package.json" />
+    <None Include="API\node_modules\accepts\README.md" />
+    <None Include="API\node_modules\array-flatten\LICENSE" />
+    <None Include="API\node_modules\array-flatten\package.json" />
+    <None Include="API\node_modules\array-flatten\README.md" />
+    <None Include="API\node_modules\bignumber.js\bignumber.min.js.map" />
+    <None Include="API\node_modules\bignumber.js\bignumber.mjs" />
+    <None Include="API\node_modules\bignumber.js\CHANGELOG.md" />
+    <None Include="API\node_modules\bignumber.js\LICENCE" />
+    <None Include="API\node_modules\bignumber.js\package.json" />
+    <None Include="API\node_modules\bignumber.js\README.md" />
+    <None Include="API\node_modules\body-parser\HISTORY.md" />
+    <None Include="API\node_modules\body-parser\LICENSE" />
+    <None Include="API\node_modules\body-parser\package.json" />
+    <None Include="API\node_modules\body-parser\README.md" />
+    <None Include="API\node_modules\bytes\History.md" />
+    <None Include="API\node_modules\bytes\LICENSE" />
+    <None Include="API\node_modules\bytes\package.json" />
+    <None Include="API\node_modules\bytes\Readme.md" />
+    <None Include="API\node_modules\content-disposition\HISTORY.md" />
+    <None Include="API\node_modules\content-disposition\LICENSE" />
+    <None Include="API\node_modules\content-disposition\package.json" />
+    <None Include="API\node_modules\content-disposition\README.md" />
+    <None Include="API\node_modules\content-type\HISTORY.md" />
+    <None Include="API\node_modules\content-type\LICENSE" />
+    <None Include="API\node_modules\content-type\package.json" />
+    <None Include="API\node_modules\content-type\README.md" />
+    <None Include="API\node_modules\cookie-signature\.npmignore" />
+    <None Include="API\node_modules\cookie-signature\History.md" />
+    <None Include="API\node_modules\cookie-signature\package.json" />
+    <None Include="API\node_modules\cookie-signature\Readme.md" />
+    <None Include="API\node_modules\cookie\HISTORY.md" />
+    <None Include="API\node_modules\cookie\LICENSE" />
+    <None Include="API\node_modules\cookie\package.json" />
+    <None Include="API\node_modules\cookie\README.md" />
+    <None Include="API\node_modules\core-util-is\LICENSE" />
+    <None Include="API\node_modules\core-util-is\package.json" />
+    <None Include="API\node_modules\core-util-is\README.md" />
+    <None Include="API\node_modules\debug\.coveralls.yml" />
+    <None Include="API\node_modules\debug\.eslintrc" />
+    <None Include="API\node_modules\debug\.npmignore" />
+    <None Include="API\node_modules\debug\.travis.yml" />
+    <None Include="API\node_modules\debug\CHANGELOG.md" />
+    <None Include="API\node_modules\debug\component.json" />
+    <None Include="API\node_modules\debug\LICENSE" />
+    <None Include="API\node_modules\debug\Makefile" />
+    <None Include="API\node_modules\debug\package.json" />
+    <None Include="API\node_modules\debug\README.md" />
+    <None Include="API\node_modules\depd\History.md" />
+    <None Include="API\node_modules\depd\LICENSE" />
+    <None Include="API\node_modules\depd\package.json" />
+    <None Include="API\node_modules\depd\Readme.md" />
+    <None Include="API\node_modules\destroy\LICENSE" />
+    <None Include="API\node_modules\destroy\package.json" />
+    <None Include="API\node_modules\destroy\README.md" />
+    <None Include="API\node_modules\ee-first\LICENSE" />
+    <None Include="API\node_modules\ee-first\package.json" />
+    <None Include="API\node_modules\ee-first\README.md" />
+    <None Include="API\node_modules\encodeurl\HISTORY.md" />
+    <None Include="API\node_modules\encodeurl\LICENSE" />
+    <None Include="API\node_modules\encodeurl\package.json" />
+    <None Include="API\node_modules\encodeurl\README.md" />
+    <None Include="API\node_modules\escape-html\LICENSE" />
+    <None Include="API\node_modules\escape-html\package.json" />
+    <None Include="API\node_modules\escape-html\Readme.md" />
+    <None Include="API\node_modules\etag\HISTORY.md" />
+    <None Include="API\node_modules\etag\LICENSE" />
+    <None Include="API\node_modules\etag\package.json" />
+    <None Include="API\node_modules\etag\README.md" />
+    <None Include="API\node_modules\express\History.md" />
+    <None Include="API\node_modules\express\LICENSE" />
+    <None Include="API\node_modules\express\package.json" />
+    <None Include="API\node_modules\express\Readme.md" />
+    <None Include="API\node_modules\finalhandler\HISTORY.md" />
+    <None Include="API\node_modules\finalhandler\LICENSE" />
+    <None Include="API\node_modules\finalhandler\package.json" />
+    <None Include="API\node_modules\finalhandler\README.md" />
+    <None Include="API\node_modules\forwarded\HISTORY.md" />
+    <None Include="API\node_modules\forwarded\LICENSE" />
+    <None Include="API\node_modules\forwarded\package.json" />
+    <None Include="API\node_modules\forwarded\README.md" />
+    <None Include="API\node_modules\fresh\HISTORY.md" />
+    <None Include="API\node_modules\fresh\LICENSE" />
+    <None Include="API\node_modules\fresh\package.json" />
+    <None Include="API\node_modules\fresh\README.md" />
+    <None Include="API\node_modules\http-errors\HISTORY.md" />
+    <None Include="API\node_modules\http-errors\LICENSE" />
+    <None Include="API\node_modules\http-errors\package.json" />
+    <None Include="API\node_modules\http-errors\README.md" />
+    <None Include="API\node_modules\iconv-lite\Changelog.md" />
+    <None Include="API\node_modules\iconv-lite\encodings\tables\big5-added.json" />
+    <None Include="API\node_modules\iconv-lite\encodings\tables\cp936.json" />
+    <None Include="API\node_modules\iconv-lite\encodings\tables\cp949.json" />
+    <None Include="API\node_modules\iconv-lite\encodings\tables\cp950.json" />
+    <None Include="API\node_modules\iconv-lite\encodings\tables\eucjp.json" />
+    <None Include="API\node_modules\iconv-lite\encodings\tables\gb18030-ranges.json" />
+    <None Include="API\node_modules\iconv-lite\encodings\tables\gbk-added.json" />
+    <None Include="API\node_modules\iconv-lite\encodings\tables\shiftjis.json" />
+    <None Include="API\node_modules\iconv-lite\LICENSE" />
+    <None Include="API\node_modules\iconv-lite\package.json" />
+    <None Include="API\node_modules\iconv-lite\README.md" />
+    <None Include="API\node_modules\inherits\LICENSE" />
+    <None Include="API\node_modules\inherits\package.json" />
+    <None Include="API\node_modules\inherits\README.md" />
+    <None Include="API\node_modules\ipaddr.js\LICENSE" />
+    <None Include="API\node_modules\ipaddr.js\package.json" />
+    <None Include="API\node_modules\ipaddr.js\README.md" />
+    <None Include="API\node_modules\isarray\.npmignore" />
+    <None Include="API\node_modules\isarray\.travis.yml" />
+    <None Include="API\node_modules\isarray\component.json" />
+    <None Include="API\node_modules\isarray\Makefile" />
+    <None Include="API\node_modules\isarray\package.json" />
+    <None Include="API\node_modules\isarray\README.md" />
+    <None Include="API\node_modules\media-typer\HISTORY.md" />
+    <None Include="API\node_modules\media-typer\LICENSE" />
+    <None Include="API\node_modules\media-typer\package.json" />
+    <None Include="API\node_modules\media-typer\README.md" />
+    <None Include="API\node_modules\merge-descriptors\HISTORY.md" />
+    <None Include="API\node_modules\merge-descriptors\LICENSE" />
+    <None Include="API\node_modules\merge-descriptors\package.json" />
+    <None Include="API\node_modules\merge-descriptors\README.md" />
+    <None Include="API\node_modules\methods\HISTORY.md" />
+    <None Include="API\node_modules\methods\LICENSE" />
+    <None Include="API\node_modules\methods\package.json" />
+    <None Include="API\node_modules\methods\README.md" />
+    <None Include="API\node_modules\mime-db\db.json" />
+    <None Include="API\node_modules\mime-db\HISTORY.md" />
+    <None Include="API\node_modules\mime-db\LICENSE" />
+    <None Include="API\node_modules\mime-db\package.json" />
+    <None Include="API\node_modules\mime-db\README.md" />
+    <None Include="API\node_modules\mime-types\HISTORY.md" />
+    <None Include="API\node_modules\mime-types\LICENSE" />
+    <None Include="API\node_modules\mime-types\package.json" />
+    <None Include="API\node_modules\mime-types\README.md" />
+    <None Include="API\node_modules\mime\.npmignore" />
+    <None Include="API\node_modules\mime\CHANGELOG.md" />
+    <None Include="API\node_modules\mime\LICENSE" />
+    <None Include="API\node_modules\mime\package.json" />
+    <None Include="API\node_modules\mime\README.md" />
+    <None Include="API\node_modules\mime\types.json" />
+    <None Include="API\node_modules\ms\license.md" />
+    <None Include="API\node_modules\ms\package.json" />
+    <None Include="API\node_modules\ms\readme.md" />
+    <None Include="API\node_modules\mysql\Changes.md" />
+    <None Include="API\node_modules\mysql\License" />
+    <None Include="API\node_modules\mysql\node_modules\safe-buffer\LICENSE" />
+    <None Include="API\node_modules\mysql\node_modules\safe-buffer\package.json" />
+    <None Include="API\node_modules\mysql\node_modules\safe-buffer\README.md" />
+    <None Include="API\node_modules\mysql\package.json" />
+    <None Include="API\node_modules\mysql\Readme.md" />
+    <None Include="API\node_modules\negotiator\HISTORY.md" />
+    <None Include="API\node_modules\negotiator\LICENSE" />
+    <None Include="API\node_modules\negotiator\package.json" />
+    <None Include="API\node_modules\negotiator\README.md" />
+    <None Include="API\node_modules\on-finished\HISTORY.md" />
+    <None Include="API\node_modules\on-finished\LICENSE" />
+    <None Include="API\node_modules\on-finished\package.json" />
+    <None Include="API\node_modules\on-finished\README.md" />
+    <None Include="API\node_modules\parseurl\HISTORY.md" />
+    <None Include="API\node_modules\parseurl\LICENSE" />
+    <None Include="API\node_modules\parseurl\package.json" />
+    <None Include="API\node_modules\parseurl\README.md" />
+    <None Include="API\node_modules\path-to-regexp\History.md" />
+    <None Include="API\node_modules\path-to-regexp\LICENSE" />
+    <None Include="API\node_modules\path-to-regexp\package.json" />
+    <None Include="API\node_modules\path-to-regexp\Readme.md" />
+    <None Include="API\node_modules\process-nextick-args\license.md" />
+    <None Include="API\node_modules\process-nextick-args\package.json" />
+    <None Include="API\node_modules\process-nextick-args\readme.md" />
+    <None Include="API\node_modules\proxy-addr\HISTORY.md" />
+    <None Include="API\node_modules\proxy-addr\LICENSE" />
+    <None Include="API\node_modules\proxy-addr\package.json" />
+    <None Include="API\node_modules\proxy-addr\README.md" />
+    <None Include="API\node_modules\qs\.editorconfig" />
+    <None Include="API\node_modules\qs\.eslintrc" />
+    <None Include="API\node_modules\qs\.github\FUNDING.yml" />
+    <None Include="API\node_modules\qs\.nycrc" />
+    <None Include="API\node_modules\qs\CHANGELOG.md" />
+    <None Include="API\node_modules\qs\LICENSE.md" />
+    <None Include="API\node_modules\qs\package.json" />
+    <None Include="API\node_modules\qs\README.md" />
+    <None Include="API\node_modules\range-parser\HISTORY.md" />
+    <None Include="API\node_modules\range-parser\LICENSE" />
+    <None Include="API\node_modules\range-parser\package.json" />
+    <None Include="API\node_modules\range-parser\README.md" />
+    <None Include="API\node_modules\raw-body\HISTORY.md" />
+    <None Include="API\node_modules\raw-body\LICENSE" />
+    <None Include="API\node_modules\raw-body\package.json" />
+    <None Include="API\node_modules\raw-body\README.md" />
+    <None Include="API\node_modules\readable-stream\.travis.yml" />
+    <None Include="API\node_modules\readable-stream\CONTRIBUTING.md" />
+    <None Include="API\node_modules\readable-stream\doc\wg-meetings\2015-01-30.md" />
+    <None Include="API\node_modules\readable-stream\GOVERNANCE.md" />
+    <None Include="API\node_modules\readable-stream\LICENSE" />
+    <None Include="API\node_modules\readable-stream\node_modules\safe-buffer\LICENSE" />
+    <None Include="API\node_modules\readable-stream\node_modules\safe-buffer\package.json" />
+    <None Include="API\node_modules\readable-stream\node_modules\safe-buffer\README.md" />
+    <None Include="API\node_modules\readable-stream\package.json" />
+    <None Include="API\node_modules\readable-stream\README.md" />
+    <None Include="API\node_modules\safe-buffer\LICENSE" />
+    <None Include="API\node_modules\safe-buffer\package.json" />
+    <None Include="API\node_modules\safe-buffer\README.md" />
+    <None Include="API\node_modules\safer-buffer\LICENSE" />
+    <None Include="API\node_modules\safer-buffer\package.json" />
+    <None Include="API\node_modules\safer-buffer\Porting-Buffer.md" />
+    <None Include="API\node_modules\safer-buffer\Readme.md" />
+    <None Include="API\node_modules\send\HISTORY.md" />
+    <None Include="API\node_modules\send\LICENSE" />
+    <None Include="API\node_modules\send\node_modules\ms\license.md" />
+    <None Include="API\node_modules\send\node_modules\ms\package.json" />
+    <None Include="API\node_modules\send\node_modules\ms\readme.md" />
+    <None Include="API\node_modules\send\package.json" />
+    <None Include="API\node_modules\send\README.md" />
+    <None Include="API\node_modules\serve-static\HISTORY.md" />
+    <None Include="API\node_modules\serve-static\LICENSE" />
+    <None Include="API\node_modules\serve-static\package.json" />
+    <None Include="API\node_modules\serve-static\README.md" />
+    <None Include="API\node_modules\setprototypeof\LICENSE" />
+    <None Include="API\node_modules\setprototypeof\package.json" />
+    <None Include="API\node_modules\setprototypeof\README.md" />
+    <None Include="API\node_modules\sqlstring\HISTORY.md" />
+    <None Include="API\node_modules\sqlstring\LICENSE" />
+    <None Include="API\node_modules\sqlstring\package.json" />
+    <None Include="API\node_modules\sqlstring\README.md" />
+    <None Include="API\node_modules\statuses\codes.json" />
+    <None Include="API\node_modules\statuses\HISTORY.md" />
+    <None Include="API\node_modules\statuses\LICENSE" />
+    <None Include="API\node_modules\statuses\package.json" />
+    <None Include="API\node_modules\statuses\README.md" />
+    <None Include="API\node_modules\string_decoder\.travis.yml" />
+    <None Include="API\node_modules\string_decoder\LICENSE" />
+    <None Include="API\node_modules\string_decoder\node_modules\safe-buffer\LICENSE" />
+    <None Include="API\node_modules\string_decoder\node_modules\safe-buffer\package.json" />
+    <None Include="API\node_modules\string_decoder\node_modules\safe-buffer\README.md" />
+    <None Include="API\node_modules\string_decoder\package.json" />
+    <None Include="API\node_modules\string_decoder\README.md" />
+    <None Include="API\node_modules\toidentifier\HISTORY.md" />
+    <None Include="API\node_modules\toidentifier\LICENSE" />
+    <None Include="API\node_modules\toidentifier\package.json" />
+    <None Include="API\node_modules\toidentifier\README.md" />
+    <None Include="API\node_modules\type-is\HISTORY.md" />
+    <None Include="API\node_modules\type-is\LICENSE" />
+    <None Include="API\node_modules\type-is\package.json" />
+    <None Include="API\node_modules\type-is\README.md" />
+    <None Include="API\node_modules\unpipe\HISTORY.md" />
+    <None Include="API\node_modules\unpipe\LICENSE" />
+    <None Include="API\node_modules\unpipe\package.json" />
+    <None Include="API\node_modules\unpipe\README.md" />
+    <None Include="API\node_modules\util-deprecate\History.md" />
+    <None Include="API\node_modules\util-deprecate\LICENSE" />
+    <None Include="API\node_modules\util-deprecate\package.json" />
+    <None Include="API\node_modules\util-deprecate\README.md" />
+    <None Include="API\node_modules\utils-merge\.npmignore" />
+    <None Include="API\node_modules\utils-merge\LICENSE" />
+    <None Include="API\node_modules\utils-merge\package.json" />
+    <None Include="API\node_modules\utils-merge\README.md" />
+    <None Include="API\node_modules\vary\HISTORY.md" />
+    <None Include="API\node_modules\vary\LICENSE" />
+    <None Include="API\node_modules\vary\package.json" />
+    <None Include="API\node_modules\vary\README.md" />
+    <None Include="API\package-lock.json" />
+    <None Include="API\package.json" />
+    <None Include="DBQuanLyThuVien.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBQuanLyThuVien.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBQuanLyThuVien.dbml.layout">
+      <DependentUpon>DBQuanLyThuVien.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\hutech-banner-test.png" />
+    <Content Include="API\api\controllers\db.js" />
+    <Content Include="API\api\controllers\ProductsController.js" />
+    <Content Include="API\api\controllers\routes.js" />
+    <Content Include="API\node_modules\accepts\index.js" />
+    <Content Include="API\node_modules\array-flatten\array-flatten.js" />
+    <Content Include="API\node_modules\bignumber.js\bignumber.js" />
+    <Content Include="API\node_modules\bignumber.js\bignumber.min.js" />
+    <Content Include="API\node_modules\bignumber.js\doc\API.html" />
+    <Content Include="API\node_modules\body-parser\index.js" />
+    <Content Include="API\node_modules\body-parser\lib\read.js" />
+    <Content Include="API\node_modules\body-parser\lib\types\json.js" />
+    <Content Include="API\node_modules\body-parser\lib\types\raw.js" />
+    <Content Include="API\node_modules\body-parser\lib\types\text.js" />
+    <Content Include="API\node_modules\body-parser\lib\types\urlencoded.js" />
+    <Content Include="API\node_modules\bytes\index.js" />
+    <Content Include="API\node_modules\content-disposition\index.js" />
+    <Content Include="API\node_modules\content-type\index.js" />
+    <Content Include="API\node_modules\cookie-signature\index.js" />
+    <Content Include="API\node_modules\cookie\index.js" />
+    <Content Include="API\node_modules\core-util-is\lib\util.js" />
+    <Content Include="API\node_modules\debug\karma.conf.js" />
+    <Content Include="API\node_modules\debug\node.js" />
+    <Content Include="API\node_modules\debug\src\browser.js" />
+    <Content Include="API\node_modules\debug\src\debug.js" />
+    <Content Include="API\node_modules\debug\src\index.js" />
+    <Content Include="API\node_modules\debug\src\inspector-log.js" />
+    <Content Include="API\node_modules\debug\src\node.js" />
+    <Content Include="API\node_modules\depd\index.js" />
+    <Content Include="API\node_modules\depd\lib\browser\index.js" />
+    <Content Include="API\node_modules\depd\lib\compat\callsite-tostring.js" />
+    <Content Include="API\node_modules\depd\lib\compat\event-listener-count.js" />
+    <Content Include="API\node_modules\depd\lib\compat\index.js" />
+    <Content Include="API\node_modules\destroy\index.js" />
+    <Content Include="API\node_modules\ee-first\index.js" />
+    <Content Include="API\node_modules\encodeurl\index.js" />
+    <Content Include="API\node_modules\escape-html\index.js" />
+    <Content Include="API\node_modules\etag\index.js" />
+    <Content Include="API\node_modules\express\index.js" />
+    <Content Include="API\node_modules\express\lib\application.js" />
+    <Content Include="API\node_modules\express\lib\express.js" />
+    <Content Include="API\node_modules\express\lib\middleware\init.js" />
+    <Content Include="API\node_modules\express\lib\middleware\query.js" />
+    <Content Include="API\node_modules\express\lib\request.js" />
+    <Content Include="API\node_modules\express\lib\response.js" />
+    <Content Include="API\node_modules\express\lib\router\index.js" />
+    <Content Include="API\node_modules\express\lib\router\layer.js" />
+    <Content Include="API\node_modules\express\lib\router\route.js" />
+    <Content Include="API\node_modules\express\lib\utils.js" />
+    <Content Include="API\node_modules\express\lib\view.js" />
+    <Content Include="API\node_modules\finalhandler\index.js" />
+    <Content Include="API\node_modules\forwarded\index.js" />
+    <Content Include="API\node_modules\fresh\index.js" />
+    <Content Include="API\node_modules\http-errors\index.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\dbcs-codec.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\dbcs-data.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\index.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\internal.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\sbcs-codec.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\sbcs-data-generated.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\sbcs-data.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\utf16.js" />
+    <Content Include="API\node_modules\iconv-lite\encodings\utf7.js" />
+    <Content Include="API\node_modules\iconv-lite\lib\bom-handling.js" />
+    <Content Include="API\node_modules\iconv-lite\lib\extend-node.js" />
+    <Content Include="API\node_modules\iconv-lite\lib\index.js" />
+    <Content Include="API\node_modules\iconv-lite\lib\streams.js" />
+    <Content Include="API\node_modules\inherits\inherits.js" />
+    <Content Include="API\node_modules\inherits\inherits_browser.js" />
+    <Content Include="API\node_modules\ipaddr.js\ipaddr.min.js" />
+    <Content Include="API\node_modules\ipaddr.js\lib\ipaddr.js" />
+    <Content Include="API\node_modules\isarray\index.js" />
+    <Content Include="API\node_modules\isarray\test.js" />
+    <Content Include="API\node_modules\media-typer\index.js" />
+    <Content Include="API\node_modules\merge-descriptors\index.js" />
+    <Content Include="API\node_modules\methods\index.js" />
+    <Content Include="API\node_modules\mime-db\index.js" />
+    <Content Include="API\node_modules\mime-types\index.js" />
+    <Content Include="API\node_modules\mime\cli.js" />
+    <Content Include="API\node_modules\mime\mime.js" />
+    <Content Include="API\node_modules\mime\src\build.js" />
+    <Content Include="API\node_modules\mime\src\test.js" />
+    <Content Include="API\node_modules\ms\index.js" />
+    <Content Include="API\node_modules\mysql\index.js" />
+    <Content Include="API\node_modules\mysql\lib\Connection.js" />
+    <Content Include="API\node_modules\mysql\lib\ConnectionConfig.js" />
+    <Content Include="API\node_modules\mysql\lib\Pool.js" />
+    <Content Include="API\node_modules\mysql\lib\PoolCluster.js" />
+    <Content Include="API\node_modules\mysql\lib\PoolConfig.js" />
+    <Content Include="API\node_modules\mysql\lib\PoolConnection.js" />
+    <Content Include="API\node_modules\mysql\lib\PoolNamespace.js" />
+    <Content Include="API\node_modules\mysql\lib\PoolSelector.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\Auth.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\BufferList.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\constants\charsets.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\constants\client.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\constants\errors.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\constants\field_flags.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\constants\server_status.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\constants\ssl_profiles.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\constants\types.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\PacketHeader.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\AuthSwitchRequestPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\AuthSwitchResponsePacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\ClientAuthenticationPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\ComChangeUserPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\ComPingPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\ComQueryPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\ComQuitPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\ComStatisticsPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\EmptyPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\EofPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\ErrorPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\Field.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\FieldPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\HandshakeInitializationPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\index.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\LocalDataFilePacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\LocalInfileRequestPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\OkPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\OldPasswordPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\ResultSetHeaderPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\RowDataPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\SSLRequestPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\StatisticsPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\packets\UseOldPasswordPacket.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\PacketWriter.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\Parser.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\Protocol.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\ResultSet.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\sequences\ChangeUser.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\sequences\Handshake.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\sequences\index.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\sequences\Ping.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\sequences\Query.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\sequences\Quit.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\sequences\Sequence.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\sequences\Statistics.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\SqlString.js" />
+    <Content Include="API\node_modules\mysql\lib\protocol\Timer.js" />
+    <Content Include="API\node_modules\mysql\node_modules\safe-buffer\index.js" />
+    <Content Include="API\node_modules\negotiator\index.js" />
+    <Content Include="API\node_modules\negotiator\lib\charset.js" />
+    <Content Include="API\node_modules\negotiator\lib\encoding.js" />
+    <Content Include="API\node_modules\negotiator\lib\language.js" />
+    <Content Include="API\node_modules\negotiator\lib\mediaType.js" />
+    <Content Include="API\node_modules\on-finished\index.js" />
+    <Content Include="API\node_modules\parseurl\index.js" />
+    <Content Include="API\node_modules\path-to-regexp\index.js" />
+    <Content Include="API\node_modules\process-nextick-args\index.js" />
+    <Content Include="API\node_modules\proxy-addr\index.js" />
+    <Content Include="API\node_modules\qs\dist\qs.js" />
+    <Content Include="API\node_modules\qs\lib\formats.js" />
+    <Content Include="API\node_modules\qs\lib\index.js" />
+    <Content Include="API\node_modules\qs\lib\parse.js" />
+    <Content Include="API\node_modules\qs\lib\stringify.js" />
+    <Content Include="API\node_modules\qs\lib\utils.js" />
+    <Content Include="API\node_modules\qs\test\parse.js" />
+    <Content Include="API\node_modules\qs\test\stringify.js" />
+    <Content Include="API\node_modules\qs\test\utils.js" />
+    <Content Include="API\node_modules\range-parser\index.js" />
+    <Content Include="API\node_modules\raw-body\index.js" />
+    <Content Include="API\node_modules\readable-stream\duplex-browser.js" />
+    <Content Include="API\node_modules\readable-stream\duplex.js" />
+    <Content Include="API\node_modules\readable-stream\lib\internal\streams\BufferList.js" />
+    <Content Include="API\node_modules\readable-stream\lib\internal\streams\destroy.js" />
+    <Content Include="API\node_modules\readable-stream\lib\internal\streams\stream-browser.js" />
+    <Content Include="API\node_modules\readable-stream\lib\internal\streams\stream.js" />
+    <Content Include="API\node_modules\readable-stream\lib\_stream_duplex.js" />
+    <Content Include="API\node_modules\readable-stream\lib\_stream_passthrough.js" />
+    <Content Include="API\node_modules\readable-stream\lib\_stream_readable.js" />
+    <Content Include="API\node_modules\readable-stream\lib\_stream_transform.js" />
+    <Content Include="API\node_modules\readable-stream\lib\_stream_writable.js" />
+    <Content Include="API\node_modules\readable-stream\node_modules\safe-buffer\index.js" />
+    <Content Include="API\node_modules\readable-stream\passthrough.js" />
+    <Content Include="API\node_modules\readable-stream\readable-browser.js" />
+    <Content Include="API\node_modules\readable-stream\readable.js" />
+    <Content Include="API\node_modules\readable-stream\transform.js" />
+    <Content Include="API\node_modules\readable-stream\writable-browser.js" />
+    <Content Include="API\node_modules\readable-stream\writable.js" />
+    <Content Include="API\node_modules\safe-buffer\index.js" />
+    <Content Include="API\node_modules\safer-buffer\dangerous.js" />
+    <Content Include="API\node_modules\safer-buffer\safer.js" />
+    <Content Include="API\node_modules\safer-buffer\tests.js" />
+    <Content Include="API\node_modules\send\index.js" />
+    <Content Include="API\node_modules\send\node_modules\ms\index.js" />
+    <Content Include="API\node_modules\serve-static\index.js" />
+    <Content Include="API\node_modules\setprototypeof\index.js" />
+    <Content Include="API\node_modules\setprototypeof\test\index.js" />
+    <Content Include="API\node_modules\sqlstring\index.js" />
+    <Content Include="API\node_modules\sqlstring\lib\SqlString.js" />
+    <Content Include="API\node_modules\statuses\index.js" />
+    <Content Include="API\node_modules\string_decoder\lib\string_decoder.js" />
+    <Content Include="API\node_modules\string_decoder\node_modules\safe-buffer\index.js" />
+    <Content Include="API\node_modules\toidentifier\index.js" />
+    <Content Include="API\node_modules\type-is\index.js" />
+    <Content Include="API\node_modules\unpipe\index.js" />
+    <Content Include="API\node_modules\util-deprecate\browser.js" />
+    <Content Include="API\node_modules\util-deprecate\node.js" />
+    <Content Include="API\node_modules\utils-merge\index.js" />
+    <Content Include="API\node_modules\vary\index.js" />
+    <Content Include="API\server.js" />
+    <Content Include="images\hutech-banner.png" />
+    <Content Include="images\hutech-logo.png" />
+    <Content Include="images\password-icon.png" />
+    <Content Include="images\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="API\node_modules\bignumber.js\bignumber.d.ts" />
+    <TypeScriptCompile Include="API\node_modules\iconv-lite\lib\index.d.ts" />
+    <TypeScriptCompile Include="API\node_modules\ipaddr.js\lib\ipaddr.js.d.ts" />
+    <TypeScriptCompile Include="API\node_modules\mysql\node_modules\safe-buffer\index.d.ts" />
+    <TypeScriptCompile Include="API\node_modules\raw-body\index.d.ts" />
+    <TypeScriptCompile Include="API\node_modules\readable-stream\node_modules\safe-buffer\index.d.ts" />
+    <TypeScriptCompile Include="API\node_modules\safe-buffer\index.d.ts" />
+    <TypeScriptCompile Include="API\node_modules\setprototypeof\index.d.ts" />
+    <TypeScriptCompile Include="API\node_modules\string_decoder\node_modules\safe-buffer\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
