@@ -85,6 +85,10 @@ namespace QuanLyThuVien
             // 
             this.cbbSoSach.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSoSach.FormattingEnabled = true;
+            this.cbbSoSach.Items.AddRange(new object[] {
+            "3",
+            "5",
+            "10"});
             this.cbbSoSach.Location = new System.Drawing.Point(812, 120);
             this.cbbSoSach.Name = "cbbSoSach";
             this.cbbSoSach.Size = new System.Drawing.Size(73, 22);

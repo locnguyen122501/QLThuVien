@@ -380,6 +380,7 @@ namespace QuanLyThuVien
             this.dgvTraSach.ReadOnly = true;
             this.dgvTraSach.Size = new System.Drawing.Size(1189, 374);
             this.dgvTraSach.TabIndex = 2;
+            this.dgvTraSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTraSach_CellClick);
             // 
             // tabPage1
             // 
@@ -420,6 +421,7 @@ namespace QuanLyThuVien
             this.btnChoMuon.Text = "Cho mượn";
             this.btnChoMuon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChoMuon.UseVisualStyleBackColor = true;
+            this.btnChoMuon.Click += new System.EventHandler(this.btnChoMuon_Click);
             // 
             // btnXoa1
             // 
@@ -447,6 +449,7 @@ namespace QuanLyThuVien
             this.dgvMuonSach.ReadOnly = true;
             this.dgvMuonSach.Size = new System.Drawing.Size(1189, 364);
             this.dgvMuonSach.TabIndex = 1;
+            this.dgvMuonSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMuonSach_CellClick);
             this.dgvMuonSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMuonSach_CellContentClick);
             // 
             // groupBox1

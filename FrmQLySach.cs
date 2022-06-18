@@ -93,6 +93,8 @@ namespace QuanLyThuVien
         {
 
             //Tạo ra một đối tượng client để kết nối 
+
+            //Sach
             WebClient client = new WebClient();
             client.Encoding = System.Text.Encoding.UTF8;
             String json = client.DownloadString(URI); //HTTp GET, tạo Http Request, format json 
@@ -102,7 +104,7 @@ namespace QuanLyThuVien
 
             dgvSach.DataSource = bookFilter;
 
-            //Tacgia
+            //NXB
             WebClient client2 = new WebClient();
             String json2 = client.DownloadString(URI2);
             nxb = JsonConvert.DeserializeObject<List<NXB>>(json2);
@@ -415,7 +417,6 @@ namespace QuanLyThuVien
             try
             {
                 dgvSach.DataSource = books.Where(p => p.TenSach.ToLower().Contains(txtTimKiem.Text.Trim().ToLower())).ToList();
-
             }
             catch (Exception) { }
         }

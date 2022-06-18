@@ -51,26 +51,9 @@ namespace QuanLyThuVien
             qd = JsonConvert.DeserializeObject<List<Quydinh>>(json); //Chuyển từ list thành đối tượng 
         }
 
-        private void LoadComboSL()
-        {
-            //var sltk = db.QuyDinhs.SingleOrDefault(n => n.MaQD.Equals(2)).SoLuongQD;
-
-            //var sltk = qd.SingleOrDefault(n => n.MaQD.Equals(2)).SoLuongQD;
-            //sltk++;
-
-
-            //cbbSoSach.DropDownStyle = ComboBoxStyle.DropDownList;
-            //for (int i = 1; i <= sltk-1; i++)
-            //{
-            //    cbbSoSach.Items.Add(i);
-            //}
-            //cbbSoSach.Items.Add("");
-        }
-
         private void FrmThongKe_Load(object sender, EventArgs e)
         {
             GetAllBook();
-            //LoadComboSL();
 
             //vì đang dùng table book nên cần ẩn các cột không cần thiết 
             dgvThongKe.Columns[2].Visible = false;
@@ -119,22 +102,22 @@ namespace QuanLyThuVien
 
         private void cbbSoSach_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*if (cbbSoSach.Text == "")
-            {
-                GetAllBook();
-            }
-            else
-            {
-                var load = (from a in Book
-                            orderby a.SoLanMuon descending
-                            select new
-                            {
-                                a.MaSach,
-                                a.TenSach,
-                                a.SoLanMuon
-                            }).Take(int.Parse(cbbSoSach.Text.ToString()));
-                dgvThongKe.DataSource = load;
-            }*/
+            //if (cbbSoSach.Text == "")
+            //{
+            //    GetAllBook();
+            //}
+            //else
+            //{
+            //    var load = (from a in Book
+            //                orderby a.SoLanMuon descending
+            //                select new
+            //                {
+            //                    a.MaSach,
+            //                    a.TenSach,
+            //                    a.SoLanMuon
+            //                }).Take(int.Parse(cbbSoSach.Text.ToString()));
+            //    dgvThongKe.DataSource = load;
+            //}
         }
     }
 }

@@ -96,7 +96,7 @@ namespace QuanLyThuVien
             // txtSoLuongQuyDinh
             // 
             this.txtSoLuongQuyDinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuongQuyDinh.Location = new System.Drawing.Point(543, 71);
+            this.txtSoLuongQuyDinh.Location = new System.Drawing.Point(543, 130);
             this.txtSoLuongQuyDinh.Name = "txtSoLuongQuyDinh";
             this.txtSoLuongQuyDinh.Size = new System.Drawing.Size(220, 26);
             this.txtSoLuongQuyDinh.TabIndex = 25;
@@ -105,7 +105,7 @@ namespace QuanLyThuVien
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(444, 78);
+            this.label5.Location = new System.Drawing.Point(444, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 19);
             this.label5.TabIndex = 23;
@@ -114,7 +114,7 @@ namespace QuanLyThuVien
             // txtTenQuyDinh
             // 
             this.txtTenQuyDinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenQuyDinh.Location = new System.Drawing.Point(543, 130);
+            this.txtTenQuyDinh.Location = new System.Drawing.Point(543, 71);
             this.txtTenQuyDinh.Name = "txtTenQuyDinh";
             this.txtTenQuyDinh.Size = new System.Drawing.Size(220, 26);
             this.txtTenQuyDinh.TabIndex = 20;
@@ -123,7 +123,7 @@ namespace QuanLyThuVien
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(444, 137);
+            this.label2.Location = new System.Drawing.Point(444, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 18;

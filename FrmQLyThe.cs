@@ -46,7 +46,7 @@ namespace QuanLyThuVien
 
                 //int selectedIndex = comboBox1.SelectedIndex;
                 //Object selectedItem = comboBox1.SelectedItem;
-                //Khởi tạo một cuốn sách mới 
+                //Khởi tạo một thẻ mới 
                 Themuon newthe = new Themuon()
                 {
                     //Mã số tự động sinh ra nên cho bằng không 
