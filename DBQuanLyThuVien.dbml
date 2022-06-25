@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyThuVien" Class="DBQuanLyThuVienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-5606Q81H\LOCAL;Initial Catalog=QuanLyThuVien;Integrated Security=True" SettingsObjectName="QuanLyThuVien.Properties.Settings" SettingsPropertyName="QuanLyThuVienConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DocGia" Member="DocGias">
+    <Type Name="DocGia">
+      <Column Name="MaDocGia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Hoten" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="DocGia_PhieuTra" Member="PhieuTras" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="PhieuTra" />
+      <Association Name="DocGia_The" Member="Thes" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="The" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhaXuatBan" Member="NhaXuatBans">
+    <Type Name="NhaXuatBan">
+      <Column Name="MaNXB" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenNXB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NgayThanhLap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="NhaXuatBan_Sach" Member="Saches" ThisKey="MaNXB" OtherKey="MaNXB" Type="Sach" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuMuon" Member="PhieuMuons">
+    <Type Name="PhieuMuon">
+      <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaSach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenSach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaThe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaTheLoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NgayMuon" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NgayTra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoLuongMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTT" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="Sach_PhieuMuon" Member="Sach" ThisKey="MaSach" OtherKey="MaSach" Type="Sach" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="The_PhieuMuon" Member="The" ThisKey="MaThe" OtherKey="MaThe" Type="The" IsForeignKey="true" />
+      <Association Name="TheLoai_PhieuMuon" Member="TheLoai" ThisKey="MaTheLoai" OtherKey="MaTheLoai" Type="TheLoai" IsForeignKey="true" />
+      <Association Name="ThuThu_PhieuMuon" Member="ThuThu" ThisKey="MaTT" OtherKey="MaTT" Type="ThuThu" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuTra" Member="PhieuTras">
+    <Type Name="PhieuTra">
+      <Column Name="MaPhieuTra" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaThe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaSach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuongMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuongTra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayTra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TinhTrangSach" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MaTT" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="DocGia_PhieuTra" Member="DocGia" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="DocGia" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Sach_PhieuTra" Member="Sach" ThisKey="MaSach" OtherKey="MaSach" Type="Sach" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="The_PhieuTra" Member="The" ThisKey="MaThe" OtherKey="MaThe" Type="The" IsForeignKey="true" />
+      <Association Name="ThuThu_PhieuTra" Member="ThuThu" ThisKey="MaTT" OtherKey="MaTT" Type="ThuThu" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuyDinh" Member="QuyDinhs">
+    <Type Name="QuyDinh">
+      <Column Name="MaQD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenQD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoLuongQD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sach" Member="Saches">
+    <Type Name="Sach">
+      <Column Name="MaSach" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenSach" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TacGia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaTheLoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MaNXB" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuongTon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLanMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Sach_PhieuMuon" Member="PhieuMuons" ThisKey="MaSach" OtherKey="MaSach" Type="PhieuMuon" />
+      <Association Name="Sach_PhieuTra" Member="PhieuTras" ThisKey="MaSach" OtherKey="MaSach" Type="PhieuTra" />
+      <Association Name="NhaXuatBan_Sach" Member="NhaXuatBan" ThisKey="MaNXB" OtherKey="MaNXB" Type="NhaXuatBan" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="TheLoai_Sach" Member="TheLoai" ThisKey="MaTheLoai" OtherKey="MaTheLoai" Type="TheLoai" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
+    <Type Name="TaiKhoan">
+      <Column Name="MaTK" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TK" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaTT" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Quyen" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="ThuThu_TaiKhoan" Member="ThuThu" ThisKey="MaTT" OtherKey="MaTT" Type="ThuThu" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.The" Member="Thes">
+    <Type Name="The">
+      <Column Name="MaThe" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayCapThe" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NgayHetHan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MaTT" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="The_PhieuMuon" Member="PhieuMuons" ThisKey="MaThe" OtherKey="MaThe" Type="PhieuMuon" />
+      <Association Name="The_PhieuTra" Member="PhieuTras" ThisKey="MaThe" OtherKey="MaThe" Type="PhieuTra" />
+      <Association Name="DocGia_The" Member="DocGia" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="DocGia" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="ThuThu_The" Member="ThuThu" ThisKey="MaTT" OtherKey="MaTT" Type="ThuThu" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TheLoai" Member="TheLoais">
+    <Type Name="TheLoai">
+      <Column Name="MaTheLoai" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TheLoai_PhieuMuon" Member="PhieuMuons" ThisKey="MaTheLoai" OtherKey="MaTheLoai" Type="PhieuMuon" />
+      <Association Name="TheLoai_Sach" Member="Saches" ThisKey="MaTheLoai" OtherKey="MaTheLoai" Type="Sach" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThuThu" Member="ThuThus">
+    <Type Name="ThuThu">
+      <Column Name="MaTT" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Hoten" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="ThuThu_PhieuMuon" Member="PhieuMuons" ThisKey="MaTT" OtherKey="MaTT" Type="PhieuMuon" />
+      <Association Name="ThuThu_PhieuTra" Member="PhieuTras" ThisKey="MaTT" OtherKey="MaTT" Type="PhieuTra" />
+      <Association Name="ThuThu_TaiKhoan" Member="TaiKhoans" ThisKey="MaTT" OtherKey="MaTT" Type="TaiKhoan" />
+      <Association Name="ThuThu_The" Member="Thes" ThisKey="MaTT" OtherKey="MaTT" Type="The" />
+    </Type>
+  </Table>
+</Database>
