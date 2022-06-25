@@ -32,6 +32,7 @@ namespace QuanLyThuVien
         private void FrmMuonTraSach_Load(object sender, EventArgs e)
         {
             GetAll();
+            this.dgvTraSach.Columns["MaThe"].Visible = false;
         }
         private void GetAll()
         {
@@ -95,7 +96,7 @@ namespace QuanLyThuVien
                 DataGridViewRow row = this.dgvTraSach.Rows[e.RowIndex];
                 txtMaPhieuTra.Text = row.Cells[0].Value.ToString();
                 txtMaDocGia.Text = row.Cells[1].Value.ToString();
-                txtMaThe2.Text = row.Cells[2].Value.ToString();
+                //txtMaThe2.Text = row.Cells[2].Value.ToString();
                 txtTenSach2.Text = row.Cells[3].Value.ToString();
                 txtSoLuongMuon2.Text = row.Cells[4].Value.ToString();
                 txtSoLuongTra.Text = row.Cells[5].Value.ToString();
@@ -177,7 +178,7 @@ namespace QuanLyThuVien
                     //Mã số tự động sinh ra nên cho bằng không 
                     MaPhieuTra = newId,
                     MaDocGia = int.Parse(txtMaDocGia.Text.Trim()),
-                    MaThe = txtMaThe1.Text.Trim(),
+                    //MaThe = txtMaThe1.Text.Trim(),
                     MaSach = int.Parse(txtTenSach2.Text.Trim()),
                     SoLuongMuon = int.Parse(txtSoLuongMuon2.Text.Trim()),
                     SoLuongTra = int.Parse(txtSoLuongTra.Text.Trim()),

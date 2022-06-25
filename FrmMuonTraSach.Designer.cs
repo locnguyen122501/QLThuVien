@@ -36,7 +36,6 @@ namespace QuanLyThuVien
             this.btnXoa2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTenSach2 = new System.Windows.Forms.TextBox();
-            this.txtMaThe2 = new System.Windows.Forms.TextBox();
             this.txtMaDocGia = new System.Windows.Forms.TextBox();
             this.txtMaPhieuTra = new System.Windows.Forms.TextBox();
             this.txtMaTT2 = new System.Windows.Forms.TextBox();
@@ -51,7 +50,6 @@ namespace QuanLyThuVien
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.dgvTraSach = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -154,7 +152,6 @@ namespace QuanLyThuVien
             this.groupBox2.AutoSize = true;
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.Controls.Add(this.txtTenSach2);
-            this.groupBox2.Controls.Add(this.txtMaThe2);
             this.groupBox2.Controls.Add(this.txtMaDocGia);
             this.groupBox2.Controls.Add(this.txtMaPhieuTra);
             this.groupBox2.Controls.Add(this.txtMaTT2);
@@ -169,12 +166,11 @@ namespace QuanLyThuVien
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(58, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(804, 229);
+            this.groupBox2.Size = new System.Drawing.Size(804, 217);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Trả sách";
@@ -187,18 +183,10 @@ namespace QuanLyThuVien
             this.txtTenSach2.Size = new System.Drawing.Size(220, 26);
             this.txtTenSach2.TabIndex = 34;
             // 
-            // txtMaThe2
-            // 
-            this.txtMaThe2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaThe2.Location = new System.Drawing.Point(174, 71);
-            this.txtMaThe2.Name = "txtMaThe2";
-            this.txtMaThe2.Size = new System.Drawing.Size(220, 26);
-            this.txtMaThe2.TabIndex = 33;
-            // 
             // txtMaDocGia
             // 
             this.txtMaDocGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaDocGia.Location = new System.Drawing.Point(174, 38);
+            this.txtMaDocGia.Location = new System.Drawing.Point(174, 71);
             this.txtMaDocGia.Name = "txtMaDocGia";
             this.txtMaDocGia.Size = new System.Drawing.Size(220, 26);
             this.txtMaDocGia.TabIndex = 32;
@@ -206,7 +194,7 @@ namespace QuanLyThuVien
             // txtMaPhieuTra
             // 
             this.txtMaPhieuTra.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaPhieuTra.Location = new System.Drawing.Point(569, 108);
+            this.txtMaPhieuTra.Location = new System.Drawing.Point(174, 38);
             this.txtMaPhieuTra.Name = "txtMaPhieuTra";
             this.txtMaPhieuTra.ReadOnly = true;
             this.txtMaPhieuTra.Size = new System.Drawing.Size(220, 26);
@@ -222,7 +210,7 @@ namespace QuanLyThuVien
             // 
             // dtNgayTra2
             // 
-            this.dtNgayTra2.Location = new System.Drawing.Point(569, 71);
+            this.dtNgayTra2.Location = new System.Drawing.Point(569, 105);
             this.dtNgayTra2.Name = "dtNgayTra2";
             this.dtNgayTra2.Size = new System.Drawing.Size(220, 29);
             this.dtNgayTra2.TabIndex = 28;
@@ -236,7 +224,7 @@ namespace QuanLyThuVien
             this.cbbTinhTrangSach.Items.AddRange(new object[] {
             "Tốt",
             "Xấu"});
-            this.cbbTinhTrangSach.Location = new System.Drawing.Point(174, 177);
+            this.cbbTinhTrangSach.Location = new System.Drawing.Point(569, 70);
             this.cbbTinhTrangSach.Name = "cbbTinhTrangSach";
             this.cbbTinhTrangSach.Size = new System.Drawing.Size(220, 27);
             this.cbbTinhTrangSach.TabIndex = 27;
@@ -271,7 +259,7 @@ namespace QuanLyThuVien
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(436, 115);
+            this.label11.Location = new System.Drawing.Point(25, 45);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 19);
             this.label11.TabIndex = 12;
@@ -281,7 +269,7 @@ namespace QuanLyThuVien
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(436, 80);
+            this.label12.Location = new System.Drawing.Point(436, 115);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 19);
             this.label12.TabIndex = 11;
@@ -293,15 +281,15 @@ namespace QuanLyThuVien
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(436, 45);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 19);
+            this.label13.Size = new System.Drawing.Size(64, 19);
             this.label13.TabIndex = 10;
-            this.label13.Text = "Tựa sách:";
+            this.label13.Text = "Mã sách:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(25, 185);
+            this.label14.Location = new System.Drawing.Point(436, 78);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(103, 19);
             this.label14.TabIndex = 4;
@@ -311,7 +299,7 @@ namespace QuanLyThuVien
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(25, 150);
+            this.label15.Location = new System.Drawing.Point(27, 150);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(87, 19);
             this.label15.TabIndex = 3;
@@ -327,21 +315,11 @@ namespace QuanLyThuVien
             this.label16.TabIndex = 2;
             this.label16.Text = "Số lượng đã mượn:";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(25, 80);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 19);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Mã thẻ:";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(25, 45);
+            this.label18.Location = new System.Drawing.Point(25, 78);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 19);
             this.label18.TabIndex = 0;
@@ -727,7 +705,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtMaPhieuTra;
         private System.Windows.Forms.Label label19;
@@ -736,7 +713,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.TextBox txtMaThe1;
         private System.Windows.Forms.TextBox txtTenSach1;
         private System.Windows.Forms.TextBox txtTenSach2;
-        private System.Windows.Forms.TextBox txtMaThe2;
         private System.Windows.Forms.TextBox txtMaDocGia;
     }
 }
